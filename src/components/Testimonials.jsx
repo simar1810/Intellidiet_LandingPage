@@ -77,12 +77,12 @@ export default function Testimonials() {
                     {testimonials.map((item, index) => (
                         <div
                             key={index}
-                            className="min-w-[300px] md:min-w-[400px] flex-shrink-0 bg-[#f7fee7] rounded-2xl p-8 md:p-12 snap-center flex flex-col items-center text-center justify-center border border-transparent hover:border-[#84cc16] transition-colors duration-300"
+                            className="min-w-[200px] sm:min-w-[300px] md:min-w-[400px] flex-shrink-0 bg-[#f7fee7] rounded-2xl p-6 sm:p-8 md:p-12 snap-center flex flex-col items-center text-center justify-center border border-transparent hover:border-[#84cc16] transition-colors duration-300"
                         >
-                            <h3 className="text-[#65a30d] font-bold text-lg md:text-xl mb-4">
+                            <h3 className="text-[#65a30d] font-bold text-base sm:text-lg md:text-xl mb-4">
                                 {item.title}
                             </h3>
-                            <p className="text-gray-500 italic text-lg md:text-xl">
+                            <p className="text-gray-500 italic text-sm sm:text-base md:text-lg">
                                 "{item.quote}"
                             </p>
                         </div>
