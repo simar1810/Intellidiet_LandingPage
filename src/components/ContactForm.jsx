@@ -2,7 +2,7 @@ import React from "react";
 
 export default function ContactForm() {
     return (
-        <section className="md:p-24 bg-[#65a30d]"> {/* Using a lime-600/700 shade for the main background to match the "Let's Know You Better" vibe, or maybe slightly brighter like #7CFC00? The image is quite bright green. Let's try to match the brand lime color usually #84cc16 but the image looks even simpler. Let's stick to a vibrant lime green. */}
+        <section id="contact" className="md:p-24 bg-[#65a30d]"> {/* Using a lime-600/700 shade for the main background to match the "Let's Know You Better" vibe, or maybe slightly brighter like #7CFC00? The image is quite bright green. Let's try to match the brand lime color usually #84cc16 but the image looks even simpler. Let's stick to a vibrant lime green. */}
             {/* Actually, looking at the image, it's a solid green background, maybe #65a30d or #4d7c0f? No, it looks like #5d9e18 or similar. Let's use the brand lime #84cc16 as base but maybe a bit darker for text contrast if needed, but the text is white. Let's try #65a30d (lime-600) for better contrast with white text, or stick to the previous #84cc16 if that's the primary brand color. The image looks VERY green. Let's go with a custom class or style if needed, but #65a30d is safe for white text. */}
 
             <div className="mx-auto px-6 text-center">

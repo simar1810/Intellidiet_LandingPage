@@ -1,4 +1,6 @@
+import Image from "next/image";
 import React from "react";
+
 
 const features = [
     "Scientifically Designed Balanced Nutrition",
@@ -17,12 +19,23 @@ export default function WhyChooseUs() {
             <div className="max-w-6xl mx-auto px-6 relative z-10 flex flex-col md:flex-row items-center gap-16">
                 {/* Left Side: Content */}
                 <div className="w-full md:w-1/2 space-y-6">
-                    <span className="text-[#84cc16] font-bold text-xs tracking-widest uppercase">
+                    <span className="text-[#84cc16] font-bold text-sm md:text-lg tracking-widest uppercase pb-4 block">
                         Why Choose Us
                     </span>
-                    <h2 className="text-4xl md:text-5xl font-bold text-[#0a1f2e]">
-                        Trinity <span className="text-[#84cc16]">Nourishments</span>
-                    </h2>
+
+                    <div className="flex items-center gap-4">
+                        <Image
+                            src="/images/logo.png"
+                            alt="InteliDiet Logo"
+                            width={80}
+                            height={80}
+                            className="w-16 h-16 md:w-20 md:h-20 object-contain rounded-full"
+                        />
+
+                        <h2 className="text-4xl md:text-5xl font-bold text-[#0a1f2e]">
+                             <span className="text-[#84cc16]">InteliDiet</span>
+                        </h2>
+                    </div>
                     <p className="text-gray-500 text-lg leading-relaxed max-w-md">
                         Choose us for a step-by-step path to success, backed by professionals
                         and a supportive network.

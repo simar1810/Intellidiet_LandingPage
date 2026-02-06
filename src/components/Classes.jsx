@@ -99,14 +99,14 @@ const classesData = [
 
 export default function Classes() {
     return (
-        <section className="md:p-24 bg-gray-50/50">
+        <section className="md:p-24 bg-gray-400">
             <div className="mx-auto px-6">
                 {/* Header */}
                 <div className="text-center mb-16">
-                    <h2 className="text-4xl md:text-5xl font-bold text-[#0a1f2e] mb-4">
+                    <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
                         Classes for Every Level <br /> and Intention
                     </h2>
-                    <p className="text-gray-500 max-w-2xl mx-auto text-sm md:text-base">
+                    <p className="text-white max-w-2xl mx-auto text-sm md:text-lg">
                         Our classes are thoughtfully designed for all experience levels, from
                         foundational practices to advanced techniques.
                     </p>
@@ -117,9 +117,9 @@ export default function Classes() {
                     {classesData.map((item, index) => (
                         <div
                             key={index}
-                            className={`rounded-2xl p-8 md:p-10 shadow-sm flex flex-col justify-between h-full min-h-[350px] transition-transform hover:-translate-y-1 duration-300 ${item.variant === "dark"
+                            className={`rounded-2xl p-8 md:p-10 shadow-md flex flex-col justify-between h-full min-h-[350px] transition-transform hover:-translate-y-1 duration-300 ${item.variant === "dark"
                                     ? "bg-[#4b5563] text-white border border-transparent" // Updated to a smoother dark grey
-                                    : "bg-white text-[#0a1f2e] border border-gray-100"
+                                    : "bg-gray-200 text-[#0a1f2e] border border-gray-100"
                                 }`}
                         >
                             <div>
@@ -134,7 +134,7 @@ export default function Classes() {
                                 {/* Content */}
                                 <h3 className="text-2xl font-bold mb-4">{item.title}</h3>
                                 <p
-                                    className={`text-sm leading-relaxed mb-8 ${item.variant === "dark" ? "text-gray-300" : "text-gray-500"
+                                    className={`text-md leading-relaxed mb-8 ${item.variant === "dark" ? "text-gray-300" : "text-gray-500"
                                         }`}
                                 >
                                     {item.description}

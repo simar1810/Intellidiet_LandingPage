@@ -7,10 +7,25 @@ import WhyChooseUs from "@/components/WhyChooseUs";
 import Testimonials from "@/components/Testimonials";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
+import Header from "@/components/header";
+import { FaWhatsapp } from "react-icons/fa";
 
 export default function Home() {
   return (
-    <main className="min-h-screen relative flex flex-col">
+    <main id="home" className="min-h-screen relative flex flex-col">
+      {/* Floating WhatsApp Icon */}
+      <a
+        href="https://wa.me/9625691566"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed left-4 bottom-12 bg-[#25D366] text-white p-3 rounded-full shadow-lg hover:scale-110 transition-transform z-50"
+        aria-label="Chat on WhatsApp"
+      >
+        <FaWhatsapp className="w-6 h-6" />
+      </a>
+
+      <Header></Header>
+
       {/* Hero Section */}
       <div className="relative flex-grow min-h-screen flex flex-col">
         {/* Background Image */}
@@ -23,29 +38,6 @@ export default function Home() {
             priority
           />
         </div>
-
-        {/* Navigation */}
-        <nav className="relative z-10 flex justify-between items-center px-6 py-6 md:px-12 max-w-7xl w-full mx-auto text-white">
-          <div className="flex items-center gap-2">
-            <div className="bg-white rounded-full p-1">
-              {/* Placeholder Logo Icon */}
-              <div className="w-8 h-8 rounded-full border-2 border-[#84cc16] flex items-center justify-center">
-                <span className="text-[#84cc16] font-bold text-xs">In</span>
-              </div>
-            </div>
-            <span className="text-lg font-bold tracking-widest uppercase">
-              IntelliDeit
-            </span>
-          </div>
-          <div className="flex gap-8 text-sm font-semibold tracking-wide">
-            <a href="#" className="hover:text-[#84cc16] transition-colors">
-              HOME
-            </a>
-            <a href="#" className="hover:text-[#84cc16] transition-colors">
-              CONTACT
-            </a>
-          </div>
-        </nav>
 
         {/* Hero Content */}
         <div className="relative z-10 flex flex-col items-center justify-center flex-grow text-center text-white px-4">
@@ -74,8 +66,8 @@ export default function Home() {
       <PartnerInWellness />
       <Classes />
       <WhyChooseUs />
+
       <Testimonials />
-      <ContactForm />
       <Footer />
     </main>
   );

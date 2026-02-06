@@ -9,7 +9,7 @@ const steps = [
     },
     {
         id: "02",
-        title: "Get Instant Access to the Trinity Nourishments",
+        title: "Get Instant Access to the InteliDiet",
         description:
             "Get access to a personalized wellness regimen, resources, and expert guidance.",
     },
@@ -29,13 +29,21 @@ const steps = [
 
 export default function HowItWorks() {
     return (
-        <section className="py-20 bg-white relative overflow-hidden">
+        <section
+            className="py-20 bg-white relative overflow-hidden"
+            style={{
+                backgroundImage: "url('/images/how_it_works_bg.jpeg')",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                backgroundAttachment: "fixed",
+            }}
+        >
             <div className="max-w-6xl mx-auto px-4 relative z-10">
                 <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
+                    <h2 className="text-3xl md:text-6xl font-bold text-green mb-4">
                         How it Works
                     </h2>
-                    <p className="text-gray-500 max-w-xl mx-auto">
+                    <p className="text-gray text-2xl max-w-xl mx-auto">
                         Your concerns are our priority - we craft the perfect plan to fit
                         your needs.
                     </p>
@@ -59,10 +67,10 @@ export default function HowItWorks() {
                                             : "border-l-4 border-[#84cc16] text-left"
                                         }`}
                                 >
-                                    <h3 className="text-xl font-bold text-black mb-3">
+                                    <h3 className="text-2xl font-bold text-black mb-3">
                                         {step.title}
                                     </h3>
-                                    <p className="text-gray-500 text-sm leading-relaxed">
+                                    <p className="text-gray-500 text-md leading-relaxed">
                                         {step.description}
                                     </p>
                                 </div>
