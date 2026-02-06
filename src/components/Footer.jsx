@@ -13,7 +13,7 @@ export default function Footer() {
                             <div className="w-20 h-20">
                                 <Image
                                     src="/images/logo.png"
-                                    alt="Trinity Nourishments Logo"
+                                    alt="Logo"
                                     width={80}
                                     height={80}
                                     className="rounded-full"

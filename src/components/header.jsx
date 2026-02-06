@@ -17,7 +17,7 @@ export default function Header() {
   }, []);
 
   return (
-    <nav className={`fixed w-full z-50 px-30 top-0 left-0 transition-all duration-300 ${scrolled ? 'bg-black/80 backdrop-blur-md py-3 shadow-lg' : 'bg-transparent py-5'}`}>
+    <nav className={`fixed w-full z-50 px-5 lg:px-25 top-0 left-0 transition-all duration-300 ${scrolled ? 'bg-black/80 backdrop-blur-md shadow-lg' : 'bg-transparent py-5'}`}>
       <div className="container-custom flex justify-between items-center">
         <Link href="/" className="flex items-center gap-2 group">
           {/* Logo with white background handled via container */}
