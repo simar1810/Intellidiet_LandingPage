@@ -88,13 +88,6 @@ const classesData = [
             "Stress impacts both mental and physical health, disrupting sleep, digestion, and overall well-being. Effective stress reduction techniques can improve your health and enhance the success of your nutrition plan.",
         variant: "light",
     },
-    {
-        icon: "lightning",
-        title: "Building Vishvoday",
-        description:
-            "Vishvodaya are the foundation of sustainable wellness. Developing routines that align with your health goals ensures long-term success without falling into the trap of yo-yo dieting or unsustainable practices.",
-        variant: "dark",
-    },
 ];
 
 
@@ -141,32 +134,6 @@ export default function Classes() {
                                     {item.description}
                                 </p>
                             </div>
-
-                            {/* Separator Line */}
-                            <div className={`border-t mb-6 w-full ${item.variant === 'dark' ? 'border-white/20' : 'border-gray-100'}`}></div>
-
-                            {/* Link */}
-                            <a
-                                href="#"
-                                className="inline-flex items-center text-sm font-bold tracking-widest text-[#84cc16] hover:text-[#65a30d] transition-colors uppercase group"
-                            >
-                                Learn More
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="16"
-                                    height="16"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    strokeWidth="2"
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    className="ml-2 transform group-hover:translate-x-1 transition-transform"
-                                >
-                                    <path d="M5 12h14" />
-                                    <path d="m12 5 7 7-7 7" />
-                                </svg>
-                            </a>
                         </div>
                     ))}
                 </div>

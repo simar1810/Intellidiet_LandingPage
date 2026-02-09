@@ -9,7 +9,7 @@ const steps = [
     },
     {
         id: "02",
-        title: "Get Instant Access to the InteliDiet",
+        title: "Get Instant Access to the IntelliDiet",
         description:
             "Get access to a personalized wellness regimen, resources, and expert guidance.",
     },
