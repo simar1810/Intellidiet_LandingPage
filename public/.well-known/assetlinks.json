@@ -1,0 +1,15 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls",
+      "delegate_permission/common.get_login_creds"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.wellnessz.inteli",
+      "sha256_cert_fingerprints": [
+        "3B:11:CE:4E:2D:4F:E1:39:BD:B3:81:4F:C3:16:C0:A5:2B:B3:5C:84:D7:E0:6E:DF:1F:6F:9E:C5:F2:E7:E7:77"
+      ]
+    }
+  }
+]

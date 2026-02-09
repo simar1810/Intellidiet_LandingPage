@@ -32,9 +32,6 @@ export default function Header() {
           <Link href="/" className="text-white/90 hover:text-[#84bd00] transition-colors text-sm uppercase tracking-widest font-medium relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-[#84bd00] after:transition-all hover:after:w-full">
             Home
           </Link>
-          <Link href="/#contact" className="text-white/90 hover:text-[#84bd00] transition-colors text-sm uppercase tracking-widest font-medium relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-[#84bd00] after:transition-all hover:after:w-full">
-            Contact
-          </Link>
           <Link href="/privacy-policy" className="text-white/90 hover:text-[#84bd00] transition-colors text-sm uppercase tracking-widest font-medium relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-[#84bd00] after:transition-all hover:after:w-full">
             Privacy
           </Link>
@@ -59,9 +56,6 @@ export default function Header() {
         <div className="absolute top-full left-0 w-full bg-[#1a1a1a] p-6 flex flex-col gap-6 md:hidden shadow-2xl border-t border-white/10">
           <Link href="/" className="text-white text-lg font-medium hover:text-[#84bd00] text-center" onClick={() => setIsMenuOpen(false)}>
             Home
-          </Link>
-          <Link href="/#contact" className="text-white text-lg font-medium hover:text-[#84bd00] text-center" onClick={() => setIsMenuOpen(false)}>
-            Contact
           </Link>
           <Link href="/privacy-policy" className="text-white text-lg font-medium hover:text-[#84bd00] text-center" onClick={() => setIsMenuOpen(false)}>
             Privacy Policy

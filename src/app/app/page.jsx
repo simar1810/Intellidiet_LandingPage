@@ -1,8 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
+import Header from "@/components/header";
+import Footer from "@/components/Footer";
 
 export default function Page() {
-  return <section className="w-full min-h-screen bg-[url('/app_bg.png')] bg-center flex justify-center items-center py-[4rem] px-6 md:px-12 ">
+  return (
+    <main className="min-h-screen flex flex-col">
+      <Header />
+      <section className="flex-1 w-full bg-[url('/app_bg.png')] bg-center flex justify-center items-center py-[4rem] px-6 md:px-12 ">
     <div className="flex flex-col xl:flex-row justify-between items-center h-full text-white gap-[2rem] xl:gap-[5rem]">
       <div className="xl:min-w-1/2 flex flex-col items-center xl:items-start xl:pl-6 md:mt-[10rem] xl:mt-0 text-center xl:text-left">
         <p className="text-sm md:text-xl lg:text-3xl xl:text-xl mb-5 opacity-70 ">Begin your journey Towards Making People Healthy</p>
@@ -25,5 +30,8 @@ export default function Page() {
           className="w-full self-center lg:max-w-4xl xl:w-lg 2xl:max-w-3xl object-contain" />
       </div>
     </div>
-  </section>
+      </section>
+      <Footer />
+    </main>
+  );
 }
