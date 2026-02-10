@@ -4,7 +4,7 @@ import Header from "@/components/header";
 import Footer from "@/components/Footer";
 
 const PrivacyPolicy = () => {
-  const appName = "IntelliDiet";
+  const appName = "InteliDiet";
 
   return (
     <main className="min-h-screen flex flex-col bg-[#FAFAFA]">

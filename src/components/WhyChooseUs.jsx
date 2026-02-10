@@ -26,14 +26,14 @@ export default function WhyChooseUs() {
                     <div className="flex items-center gap-4">
                         <Image
                             src="/images/logo.png"
-                            alt="IntelliDiet Logo"
+                            alt="InteliDiet Logo"
                             width={80}
                             height={80}
                             className="w-16 h-16 md:w-20 md:h-20 object-contain rounded-full"
                         />
 
                         <h2 className="text-4xl md:text-5xl font-bold text-[#0a1f2e]">
-                             <span className="text-[#84cc16]">IntelliDiet</span>
+                             <span className="text-[#84cc16]">InteliDiet</span>
                         </h2>
                     </div>
                     <p className="text-gray-500 text-lg leading-relaxed max-w-md">

@@ -21,7 +21,7 @@ export default function Footer() {
                                 />
                             </div>
                             <div className="flex flex-col">
-                                <span className="font-bold tracking-widest text-4xl leading-none">IntelliDiet</span>
+                                <span className="font-bold tracking-widest text-4xl leading-none">InteliDiet</span>
                             </div>
                         </div>
                         <p className="text-white/80 leading-relaxed text-sm">
@@ -75,7 +75,7 @@ export default function Footer() {
 
                 {/* Bottom Bar: Copyright */}
                 <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-white/60 gap-4">
-                    <p>© 2026 IntelliDiet. All rights reserved.</p>
+                    <p>© 2026 InteliDiet. All rights reserved.</p>
                     <p className="flex items-center gap-1 text-lg md:text-xl">
                         Made with <span className="text-red-500">♥</span> by WellnessZ
                     </p>
