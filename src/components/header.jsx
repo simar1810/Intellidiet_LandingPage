@@ -24,7 +24,7 @@ export default function Header() {
           <div className="w-20 h-20 rounded-full flex items-center justify-center overflow-hidden transition-transform group-hover:rotate-12 duration-500">
             <Image src="/images/logo.png" alt="IntelliDiet Logo" className="w-full h-full object-contain p-1" width={80} height={80} />
           </div>
-          <span className="text-white text-xl md:text-2xl font-bold tracking-widest uppercase">IntelliDiet</span>
+          <span className="text-white text-xl md:text-2xl font-bold tracking-widest uppercase">InteliDiet</span>
         </Link>
 
         {/* Desktop Nav */}
