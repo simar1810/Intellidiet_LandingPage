@@ -1,86 +1,111 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { FaInstagram, FaLinkedin } from "react-icons/fa";
+import { Facebook, Twitter, Instagram, Youtube, Mail, MapPin, Phone } from "lucide-react";
 
-export default function Footer() {
+const Footer = () => {
     return (
-        <footer id='contact' className="bg-[#064e3b] text-white py-16"> {/* deep emerald green */}
-            <div className="max-w-6xl mx-auto px-6">
-                <div className="flex flex-col md:flex-row justify-between items-start gap-12 mb-12">
-                    {/* Left Side: Brand & Description */}
-                    <div className="max-w-md">
-                        <div className="flex items-center gap-3 mb-6">
-                            <div className="w-20 h-20">
-                                <Image
-                                    src="/images/logo.png"
-                                    alt="Logo"
-                                    width={80}
-                                    height={80}
-                                    className="rounded-full"
-                                />
+        <footer className="bg-primary pt-24 pb-12 relative overflow-hidden">
+            {/* Decorative leaf */}
+            <div className="absolute right-100 top-5 w-64 h-64 opacity-10 pointer-events-none transform translate-x-1/2 -translate-y-1/2">
+                <img src="images/leaf4.png" alt="leaf" />
+            </div>
+
+            <div className="container mx-auto px-4 md:px-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
+                    {/* Brand Column */}
+                    <div className="space-y-8">
+                        <h2 className="text-3xl font-bold text-white flex items-center gap-2">
+                            <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center">
                             </div>
-                            <div className="flex flex-col">
-                                <span className="font-bold tracking-widest text-4xl leading-none">InteliDiet</span>
-                            </div>
-                        </div>
-                        <p className="text-white/80 leading-relaxed text-sm">
-                            Your partner in holistic health, bridging ancient wisdom with
-                            modern science for a balanced life.
+                            IntelliDiet
+                        </h2>
+                        <p className="text-white/70 leading-relaxed">
+                            Don't Be a Stranger, Let'd Do Something Amazing Toghether...
                         </p>
+                        <button className="bg-secondary text-white px-8 py-3 rounded-full font-bold hover:shadow-lg transition-all">
+                            Join Now
+                        </button>
                     </div>
 
-                    {/* Right Side: Contact Info */}
-                    <div className="text-left md:text-right">
-                        <h3 className="text-[#84cc16] font-bold text-lg mb-4">Contact Us</h3>
-                        <div className="space-y-2 text-white/90">
-                            <p>nutricurediet@gmail.com</p>
-                            <p>96256 91566</p>
-                            <div className="flex gap-4 mt-4">
-                                <a
-                                    href="https://www.instagram.com/dietiitiankavita?igsh=MTE1OXZsNGhjbnhjZg=="
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="text-white/90 hover:text-[#84cc16] transition-colors"
-                                >
-                                    <FaInstagram className="w-6 h-6" />
-                                </a>
-                                <a
-                                    href="https://www.linkedin.com/in/kavita-nutritionist-dietitian?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="text-white/90 hover:text-[#84cc16] transition-colors"
-                                >
-                                    <FaLinkedin className="w-6 h-6" />
-                                </a>
+                    {/* Useful Links */}
+                    <div className="space-y-8 lg:ml-12">
+                        <h4 className="text-xl font-bold text-white uppercase tracking-wider">Useful Links</h4>
+                        <ul className="space-y-4">
+                            {["Home", "About", "Services", "Portfolio", "Contact Us"].map((link) => (
+                                <li key={link}>
+                                    <Link href="#" className="text-white/70 hover:text-secondary flex items-center gap-2 group">
+                                        <span className="w-1.5 h-1.5 rounded-full bg-secondary scale-0 group-hover:scale-100 transition-transform"></span>
+                                        {link}
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+
+                    {/* Contact Us */}
+                    <div className="space-y-8">
+                        <h4 className="text-xl font-bold text-white uppercase tracking-wider">Contact Us</h4>
+                        <div className="space-y-6">
+                            <div className="flex gap-4">
+                                <MapPin className="text-secondary shrink-0" size={24} />
+                                <p className="text-white/70">123 Street, New York, USA</p>
                             </div>
+                            <div className="flex gap-4">
+                                <Phone className="text-secondary shrink-0" size={24} />
+                                <p className="text-white/70">+012 345 6789</p>
+                            </div>
+                            <div className="flex gap-4">
+                                <Mail className="text-secondary shrink-0" size={24} />
+                                <p className="text-white/70">info@example.com</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Decorative image/leaf in footer column 4 */}
+                    <div className="relative">
+                        <div className="absolute right-0 bottom-0 w-48 h-48 opacity-20 rotate-45">
+                            <img src="images/leaf3.png" alt="leaf" className="w-full h-full object-contain" />
                         </div>
                     </div>
                 </div>
 
-                {/* Links Section */}
-                <div className="border-t border-white/10 pt-8 mb-6">
-                    <div className="flex flex-wrap justify-center gap-6 text-sm">
-                        <Link href="/privacy-policy" className="text-white/60 hover:text-[#84cc16] transition-colors">
-                            Privacy Policy
-                        </Link>
-                        <Link href="/terms-and-conditions" className="text-white/60 hover:text-[#84cc16] transition-colors">
-                            Terms & Conditions
-                        </Link>
-                        <Link href="/#contact" className="text-white/60 hover:text-[#84cc16] transition-colors">
-                            Contact Us
-                        </Link>
+                {/* Newsletter & Copyright */}
+                <div className="pt-12 border-t border-white/10 space-y-8">
+                    <div className="flex flex-col lg:flex-row items-center justify-between gap-8 bg-white/5 p-6 rounded-[2rem] border border-white/10">
+                        <div className="flex items-center gap-4">
+                            <Mail className="text-white" size={32} />
+                            <h3 className="text-xl font-bold text-white">Subscribe Our Weekly Newsletter</h3>
+                        </div>
+                        <div className="w-full lg:w-1/2 flex bg-white rounded-full overflow-hidden p-1">
+                            <input
+                                type="email"
+                                placeholder="Enter your email address..."
+                                className="flex-1 px-6 py-3 text-gray-800 focus:outline-none"
+                            />
+                            <button className="bg-secondary text-white px-8 py-3 rounded-full font-bold uppercase tracking-wider text-sm transition-all hover:bg-orange-600">
+                                Subscribe
+                            </button>
+                        </div>
                     </div>
-                </div>
 
-                {/* Bottom Bar: Copyright */}
-                <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-white/60 gap-4">
-                    <p>© 2026 InteliDiet. All rights reserved.</p>
-                    <p className="flex items-center gap-1 text-lg md:text-xl">
-                        Made with <span className="text-red-500">♥</span> by WellnessZ
-                    </p>
+                    <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+                        <p className="text-white/50 text-sm">
+                            &copy; 2024 IntelliDiet. All rights reserved.
+                        </p>
+                        <div className="flex gap-4">
+                            {[Facebook, Twitter, Instagram, Youtube].map((Icon, i) => (
+                                <Link key={i} href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center text-white hover:bg-secondary transition-all">
+                                    <Icon size={18} />
+                                </Link>
+                            ))}
+                        </div>
+                    </div>
                 </div>
             </div>
         </footer>
     );
-}
+};
+
+export default Footer;

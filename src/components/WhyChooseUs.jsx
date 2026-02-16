@@ -1,79 +1,73 @@
-import Image from "next/image";
+"use client";
 import React from "react";
+import { Shield, Star, Zap, Headphones } from "lucide-react";
 
+const WhyChooseUs = () => {
+    const reasons = [
+        {
+            title: "Safe & High Speed",
+            description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+            icon: <Shield className="w-8 h-8" />,
+            color: "bg-orange-50",
+            iconColor: "text-orange-500",
+        },
+        {
+            title: "Trusted By Quality",
+            description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+            icon: <Star className="w-8 h-8" />,
+            color: "bg-green-50",
+            iconColor: "text-green-500",
+        },
+        {
+            title: "Fast Delivery",
+            description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+            icon: <Zap className="w-8 h-8" />,
+            color: "bg-blue-50",
+            iconColor: "text-blue-500",
+        },
+        {
+            title: "Best Service",
+            description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+            icon: <Headphones className="w-8 h-8" />,
+            color: "bg-cyan-50",
+            iconColor: "text-cyan-500",
+        },
+    ];
 
-const features = [
-    "Scientifically Designed Balanced Nutrition",
-    "Expert Coaching",
-    "AI-Powered Meal Plans",
-    "Easy-to-use App",
-    "Supportive Community",
-];
-
-export default function WhyChooseUs() {
     return (
-        <section className="py-20 relative overflow-hidden bg-white">
-            {/* Background Shape */}
-            <div className="absolute top-0 right-0 w-1/2 h-full bg-[#f7fee7] -skew-x-12 transform translate-x-1/4 -z-0" />
-
-            <div className="max-w-6xl mx-auto px-6 relative z-10 flex flex-col md:flex-row items-center gap-16">
-                {/* Left Side: Content */}
-                <div className="w-full md:w-1/2 space-y-6">
-                    <span className="text-[#84cc16] font-bold text-sm md:text-lg tracking-widest uppercase pb-4 block">
-                        Why Choose Us
-                    </span>
-
-                    <div className="flex items-center gap-4">
-                        <Image
-                            src="/images/logo.png"
-                            alt="InteliDiet Logo"
-                            width={80}
-                            height={80}
-                            className="w-16 h-16 md:w-20 md:h-20 object-contain rounded-full"
-                        />
-
-                        <h2 className="text-4xl md:text-5xl font-bold text-[#0a1f2e]">
-                             <span className="text-[#84cc16]">InteliDiet</span>
-                        </h2>
-                    </div>
-                    <p className="text-gray-500 text-lg leading-relaxed max-w-md">
-                        Choose us for a step-by-step path to success, backed by professionals
-                        and a supportive network.
+        <section className="py-24 bg-white">
+            <div className="container mx-auto px-4">
+                <div className="text-center mb-16 space-y-4">
+                    <h2 className="text-4xl md:text-5xl font-bold text-primary">
+                        Why Choice <span className="text-secondary">Us</span>
+                    </h2>
+                    <p className="text-gray-500 max-w-2xl mx-auto">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                     </p>
                 </div>
 
-                {/* Right Side: Feature List */}
-                <div className="w-full md:w-1/2 space-y-4">
-                    {features.map((feature, index) => (
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    {reasons.map((item, index) => (
                         <div
                             key={index}
-                            className="bg-white rounded-xl p-4 md:p-5 shadow-[0_4px_20px_rgb(0,0,0,0.03)] flex items-center gap-4 border border-gray-50 transition-transform hover:translate-x-2 duration-300"
+                            className={`p-8 rounded-3xl border border-gray-100 transition-all duration-300 hover:shadow-xl hover:-translate-y-2 group`}
                         >
-                            {/* Check Icon */}
-                            <div className="flex-shrink-0 w-10 h-10 bg-[#84cc16] rounded-lg flex items-center justify-center">
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="20"
-                                    height="20"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="white"
-                                    strokeWidth="3"
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                >
-                                    <polyline points="20 6 9 17 4 12" />
-                                </svg>
+                            <div className={`${item.color} ${item.iconColor} w-16 h-16 rounded-2xl flex items-center justify-center mb-6 transition-transform group-hover:rotate-12`}>
+                                {item.icon}
                             </div>
-
-                            {/* Text */}
-                            <span className="text-[#0a1f2e] font-bold text-lg">
-                                {feature}
-                            </span>
+                            <h3 className="text-xl font-bold text-primary mb-4">{item.title}</h3>
+                            <p className="text-gray-500 line-clamp-3 mb-6">
+                                {item.description}
+                            </p>
+                            <button className="text-secondary font-bold hover:underline">
+                                Learn More
+                            </button>
                         </div>
                     ))}
                 </div>
             </div>
         </section>
     );
-}
+};
+
+export default WhyChooseUs;
