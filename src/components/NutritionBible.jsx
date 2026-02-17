@@ -47,7 +47,7 @@ const NutritionBible = () => {
                         <div className="space-y-6">
                             <div className="flex gap-4">
                                 <div className="flex-shrink-0 w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center text-secondary">
-                                    <img src="/images/meat-icon.png" alt="Meat Icon" className="w-6 h-6" />
+                                    <img src="/images/meat-png-32.png" alt="Meat Icon" className="w-10 h-10" />
                                 </div>
                                 <div>
                                     <h4 className="font-bold text-primary mb-1 text-lg">Meat</h4>
@@ -57,7 +57,7 @@ const NutritionBible = () => {
 
                             <div className="flex gap-4">
                                 <div className="flex-shrink-0 w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center text-secondary">
-                                    <img src="/images/milk-icon.png" alt="Milk Icon" className="w-6 h-6" />
+                                    <img src="/images/milk-icon.webp" alt="Milk Icon" className="w-10 h-10" />
                                 </div>
                                 <div>
                                     <h4 className="font-bold text-primary mb-1 text-lg">Milk</h4>

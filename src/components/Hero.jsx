@@ -23,7 +23,7 @@ const Hero = () => {
                             trusted expert advice tailored to your unique lifestyle.
                         </p>
 
-                        <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                        <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 -mt-3">
                             <button className="bg-secondary hover:bg-orange-600 text-white px-10 py-4 rounded-full font-bold text-lg transition-all shadow-xl hover:shadow-orange-200 hover:-translate-y-1">
                                 Join Now
                             </button>

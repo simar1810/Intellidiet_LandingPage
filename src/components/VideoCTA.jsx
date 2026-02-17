@@ -7,11 +7,13 @@ const VideoCTA = () => {
         <section className="relative h-[600px] flex items-center justify-center overflow-hidden">
             {/* Background Image */}
             <div className="absolute inset-0">
-                <img
+                {/* <img
                     src="https://images.unsplash.com/photo-1543332164-6e82f3555182?auto=format&fit=crop&q=80&w=1600"
                     alt="Video Background"
                     className="w-full h-full object-cover"
-                />
+                /> */}
+
+                <video src="/videos/section.mp4" autoPlay muted loop playsInline className="w-full h-full object-cover"/>
                 <div className="absolute inset-0 bg-black/40"></div>
             </div>
 

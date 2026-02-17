@@ -18,6 +18,7 @@ const Footer = () => {
                     <div className="space-y-8">
                         <h2 className="text-3xl font-bold text-white flex items-center gap-2">
                             <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center">
+                                <img src="images/logo.png" className="w-full h-full"/>
                             </div>
                             IntelliDiet
                         </h2>
