@@ -10,35 +10,35 @@ const Reviews = () => {
             name: "Jean Haley",
             role: "Nutritionist",
             content:
-                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+                "Working alongside this team has been inspiring. Their evidence-based approach and personalized nutrition strategies truly help clients achieve sustainable and long-lasting health transformations.",
             avatar: "https://i.pravatar.cc/150?u=jean",
         },
         {
             name: "Richard Miles",
             role: "Healthy Enthusiast",
             content:
-                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+                "I have tried many wellness programs before, but this one genuinely focuses on balanced nutrition, consistency, and realistic lifestyle changes that actually deliver visible results.",
             avatar: "https://i.pravatar.cc/150?u=richard",
         },
         {
             name: "Helen Hill",
             role: "Customer",
             content:
-                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+                "The experience exceeded my expectations completely. The team stayed supportive throughout my journey and helped me build healthier habits that I can confidently maintain long-term.",
             avatar: "https://i.pravatar.cc/150?u=helen",
         },
         {
             name: "Robert James",
-            role: "Customer",
+            role: "Lifestyle Coach",
             content:
-                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+                "The guidance and support I received were exceptional. The program was simple to follow, effective, and helped me feel healthier, stronger, and more confident every day.",
             avatar: "https://i.pravatar.cc/150?u=robert",
         },
         {
             name: "Sofia Mell",
-            role: "Customer",
+            role: "Fitness Expert",
             content:
-                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+                "From personalized meal plans to constant encouragement, everything was thoughtfully designed. I achieved my goals safely and noticed significant improvements in my overall well-being.",
             avatar: "https://i.pravatar.cc/150?u=sofia",
         },
     ];
@@ -65,7 +65,7 @@ const Reviews = () => {
                         <span className="text-secondary">Review</span>
                     </h2>
                     <p className="text-gray-500 max-w-2xl mx-auto">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                         Real stories from clients who transformed their health successfully.
                     </p>
                 </div>
 

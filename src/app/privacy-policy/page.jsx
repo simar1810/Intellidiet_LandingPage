@@ -9,6 +9,8 @@ const PrivacyPolicy = () => {
   return (
     <main className="min-h-screen flex flex-col bg-[#FAFAFA]">
       <Header />
+
+      <div className="h-24 md:h-28"></div>
       <section className="flex-1 py-12 px-6 sm:px-10 lg:px-20 xl:px-32 overflow-hidden">
       <div className="max-w-5xl mx-auto bg-white shadow-md rounded-2xl p-6 sm:p-10 lg:p-12 relative z-10 border border-gray-100">
         {/* Header */}

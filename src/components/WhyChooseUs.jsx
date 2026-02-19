@@ -4,35 +4,36 @@ import { Shield, Star, Zap, Headphones } from "lucide-react";
 
 const WhyChooseUs = () => {
     const reasons = [
-        {
-            title: "Safe & High Speed",
-            description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-            icon: <Shield className="w-8 h-8" />,
-            color: "bg-orange-50",
-            iconColor: "text-orange-500",
-        },
-        {
-            title: "Trusted By Quality",
-            description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-            icon: <Star className="w-8 h-8" />,
-            color: "bg-green-50",
-            iconColor: "text-green-500",
-        },
-        {
-            title: "Fast Delivery",
-            description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-            icon: <Zap className="w-8 h-8" />,
-            color: "bg-blue-50",
-            iconColor: "text-blue-500",
-        },
-        {
-            title: "Best Service",
-            description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-            icon: <Headphones className="w-8 h-8" />,
-            color: "bg-cyan-50",
-            iconColor: "text-cyan-500",
-        },
-    ];
+    {
+        title: "Personalized Nutrition Plans",
+        description: "Tailored diet plans based on your health goals, lifestyle, and preferences to achieve sustainable results.",
+        icon: <Shield className="w-8 h-8" />,
+        color: "bg-orange-50",
+        iconColor: "text-orange-500",
+    },
+    {
+        title: "Trusted by Clients",
+        description: "Our certified nutritionists provide reliable guidance to help you improve overall wellness and health.",
+        icon: <Star className="w-8 h-8" />,
+        color: "bg-green-50",
+        iconColor: "text-green-500",
+    },
+    {
+        title: "Quick & Effective Results",
+        description: "Achieve your fitness and health goals faster with scientifically-backed nutrition strategies.",
+        icon: <Zap className="w-8 h-8" />,
+        color: "bg-blue-50",
+        iconColor: "text-blue-500",
+    },
+    {
+        title: "Expert Support",
+        description: "Get continuous guidance and support from our team to stay motivated and on track.",
+        icon: <Headphones className="w-8 h-8" />,
+        color: "bg-cyan-50",
+        iconColor: "text-cyan-500",
+    },
+ ];
+
 
     return (
         <section className="py-24 bg-white">
@@ -42,7 +43,7 @@ const WhyChooseUs = () => {
                         Why Choice <span className="text-secondary">Us</span>
                     </h2>
                     <p className="text-gray-500 max-w-2xl mx-auto">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                         Our certified nutritionists provide personalized diet plans and expert guidance to help you achieve your health safely and effectively.
                     </p>
                 </div>
 

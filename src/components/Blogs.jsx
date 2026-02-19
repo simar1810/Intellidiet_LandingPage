@@ -5,40 +5,40 @@ import { ArrowRight } from "lucide-react";
 const Blogs = () => {
     const blogs = [
         {
-            title: "Eating for a Healthy Heart and Clean Arteries",
-            category: "Health",
-            date: "12 March 2024",
-            image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&q=80&w=400",
+            title: "Simple Tips for Effective Weight Loss Every Day",
+            category: "Weight Loss",
+            date: "Weight Loss Plan",
+            image: "https://www.allinclusive.care/wp-content/uploads/2022/05/nutritionist-in-his-office-measures-the-volume-of-his-patient-s-waist-Weight-Loss-Miami.jpg",
         },
         {
-            title: "Delicious Morning Habits for a Lasting Energy",
-            category: "Health",
-            date: "10 March 2024",
-            image: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&q=80&w=400",
+            title: "Morning Routines to Support Healthy Thyroid Function",
+            category: "Thyroid",
+            date: "Thyroid Management Plan",
+            image: "https://www.vista-health.co.uk/media/rfllcvqg/thyroid-ultrasound.jpg?width=1440&height=720&format=webp&v=1dab8efc77af6b0",
         },
         {
-            title: "Proper Nutrition: How 1500 Cal is Explained",
-            category: "Food",
-            date: "08 March 2024",
-            image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&q=80&w=400",
+            title: "Understanding Proper Nutrition for Diabetes Management",
+            category: "Diabetes ",
+            date: "Diabetes Management Plan",
+            image: "https://tse4.mm.bing.net/th/id/OIP.R95S9mQMPd1pxVCC-K3e8gHaE8?pid=Api&P=0&h=180",
         },
         {
-            title: "Fitness & Nutrition: A Guide to Your Health Journey",
-            category: "Health",
-            date: "05 March 2024",
-            image: "https://images.unsplash.com/photo-1511690656952-34342bb7c2f2?auto=format&fit=crop&q=80&w=400",
+            title: "Fitness and Diet Tips for PCOS/PCOD Health",
+            category: "PCOS / PCOD",
+            date: "PCOS/PCOD Management Plan",
+            image: "http://www.krupahospital.com/images/services/Pcod-pcos.jpg",
         },
     ];
 
     return (
-        <section className="py-24 bg-[#F0FDF4]">
+        <section className="py-24 bg-[#F0FDF4]" id="services">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-16 space-y-4">
                     <h2 className="text-4xl md:text-5xl font-bold text-primary">
-                        Our Latest <span className="text-secondary">Blogs</span>
+                        Our Latest <span className="text-secondary">Services</span>
                     </h2>
                     <p className="text-gray-500 max-w-2xl mx-auto">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Expert nutrition solutions designed for better health and lifestyle balance.
                     </p>
                 </div>
 

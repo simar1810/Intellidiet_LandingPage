@@ -21,10 +21,10 @@ const WhyWorkWithUs = () => {
                                 🌿
                             </div>
                             <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-3">
-                                Natural Ingredients
+                                Experience 10+ yrs
                             </h3>
                             <p className="text-gray-600 mt-3 md:mt-5 leading-relaxed text-sm md:text-base lg:text-base text-justify">
-                                We use carefully sourced natural ingredients to ensure premium quality and maximum health benefits. Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque corporis dolorem accusantium ratione ad sunt libero facere pariatur! Explicabo, nisi!
+                                    With over a decade of experience in the wellness and nutrition industry, we have helped countless individuals achieve their health goals through trusted guidance and evidence-based solutions. Our team combines years of expertise with a passion for innovation, ensuring every program and product meets the highest standards of quality, safety, and effectiveness.
                             </p>
                         </div>
                         <div className="relative z-10 text-sm md:text-md font-bold text-secondary mt-4 md:mt-6">
@@ -40,10 +40,10 @@ const WhyWorkWithUs = () => {
                                 ⚡
                             </div>
                             <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-3">
-                                Fast Results
+                                We work online 7 days
                             </h3>
                             <p className="text-gray-600 mt-3 md:mt-5 leading-relaxed text-sm md:text-base lg:text-base text-justify">
-                                Our solutions are designed to deliver noticeable improvements quickly and effectively. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia recusandae ut minus sint quaerat voluptates iure architecto, mollitia in. Mollitia.
+                               Our team is available online every day of the week to provide you with seamless support and guidance. Whether you have questions, need personalized advice, or want to schedule a consultation, we are just a click away—ensuring you receive timely assistance whenever you need it.
                             </p>
                         </div>
                         <div className="relative z-10 text-sm md:text-md font-bold text-secondary mt-4 md:mt-6">
@@ -59,10 +59,10 @@ const WhyWorkWithUs = () => {
                                 🛡️
                             </div>
                             <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-3">
-                                Trusted Quality
+                                5000+ happy clients
                             </h3>
                             <p className="text-gray-600 mt-3 md:mt-5 leading-relaxed text-sm md:text-base lg:text-base text-justify">
-                                Every product goes through strict quality control to maintain excellence and safety. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil labore nobis laboriosam expedita sequi fuga doloremque iure repellat exercitationem eaque.
+                               Over 5000 clients have trusted us to achieve their health and wellness goals. Our commitment to personalized guidance, high-quality solutions, and consistent support has helped them transform their lifestyle and experience lasting results. Join our growing community of satisfied clients today!
                             </p>
                         </div>
                         <div className="relative z-10 text-sm md:text-md font-bold text-secondary mt-4 md:mt-6">
@@ -78,10 +78,10 @@ const WhyWorkWithUs = () => {
                                 💚
                             </div>
                             <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-3">
-                                Customer First
+                                100% satisfied client
                             </h3>
                             <p className="text-gray-600 mt-3 md:mt-5 leading-relaxed text-sm md:text-base lg:text-base text-justify">
-                                We prioritize customer satisfaction and long-term relationships above everything else. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates consequuntur architecto reprehenderit consequatur nostrum ex ut porro, mollitia unde. Minima.
+                               We take pride in delivering exceptional results and personalized care, ensuring every client leaves fully satisfied. Our dedication to quality, transparency, and ongoing support has earned the trust and loyalty of clients from all walks of life.
                             </p>
                         </div>
                         <div className="relative z-10 text-sm md:text-md font-bold text-secondary mt-4 md:mt-6">

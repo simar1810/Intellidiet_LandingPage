@@ -2,9 +2,22 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Facebook, Twitter, Instagram, Youtube, Mail, MapPin, Phone } from "lucide-react";
+import { Facebook, Twitter, Instagram, Youtube, Mail, MapPin, Phone, Linkedin } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 const Footer = () => {
+
+    const navLinks = [
+        { title: "Home", href: "#home" },
+        { title: "About", href: "#about" },
+        { title: "Services", href: "#services" },
+        // { title: "Portfolio", href: "#portfolio" },
+        { title: "Contact Us", href: "/contact-us" },
+        { title: "Privacy Policy", href: "/privacy-policy" },
+        { title: "Terms & Conditions", href: "/terms-and-conditions" },];
+
+    const router = useRouter();
+
     return (
         <footer className="bg-primary pt-24 pb-12 relative overflow-hidden">
             {/* Decorative leaf */}
@@ -25,7 +38,7 @@ const Footer = () => {
                         <p className="text-white/70 leading-relaxed">
                             Don't Be a Stranger, Let'd Do Something Amazing Toghether...
                         </p>
-                        <button className="bg-secondary text-white px-8 py-3 rounded-full font-bold hover:shadow-lg transition-all">
+                        <button onClick={() => router.push("/contact-us")} className="cursor-pointer bg-secondary text-white px-8 py-3 rounded-full font-bold hover:shadow-lg transition-all">
                             Join Now
                         </button>
                     </div>
@@ -34,11 +47,11 @@ const Footer = () => {
                     <div className="space-y-8 lg:ml-12">
                         <h4 className="text-xl font-bold text-white uppercase tracking-wider">Useful Links</h4>
                         <ul className="space-y-4">
-                            {["Home", "About", "Services", "Portfolio", "Contact Us"].map((link) => (
-                                <li key={link}>
-                                    <Link href="#" className="text-white/70 hover:text-secondary flex items-center gap-2 group">
+                            {navLinks.map((link) => (
+                                <li key={link.title}>
+                                    <Link href={link.href} className="text-white/70 hover:text-secondary flex items-center gap-2 group">
                                         <span className="w-1.5 h-1.5 rounded-full bg-secondary scale-0 group-hover:scale-100 transition-transform"></span>
-                                        {link}
+                                        {link.title}
                                     </Link>
                                 </li>
                             ))}
@@ -49,17 +62,17 @@ const Footer = () => {
                     <div className="space-y-8">
                         <h4 className="text-xl font-bold text-white uppercase tracking-wider">Contact Us</h4>
                         <div className="space-y-6">
-                            <div className="flex gap-4">
+                            {/* <div className="flex gap-4">
                                 <MapPin className="text-secondary shrink-0" size={24} />
                                 <p className="text-white/70">123 Street, New York, USA</p>
-                            </div>
+                            </div> */}
                             <div className="flex gap-4">
                                 <Phone className="text-secondary shrink-0" size={24} />
-                                <p className="text-white/70">+012 345 6789</p>
+                                <p className="text-white/70">96256 91566</p>
                             </div>
                             <div className="flex gap-4">
                                 <Mail className="text-secondary shrink-0" size={24} />
-                                <p className="text-white/70">info@example.com</p>
+                                <p className="text-white/70">nutricurediet@gmail.com</p>
                             </div>
                         </div>
                     </div>
@@ -74,7 +87,7 @@ const Footer = () => {
 
                 {/* Newsletter & Copyright */}
                 <div className="pt-12 border-t border-white/10 space-y-8">
-                    <div className="flex flex-col lg:flex-row items-center justify-between gap-8 bg-white/5 p-6 rounded-[2rem] border border-white/10">
+                    {/* <div className="flex flex-col lg:flex-row items-center justify-between gap-8 bg-white/5 p-6 rounded-[2rem] border border-white/10">
                         <div className="flex items-center gap-4">
                             <Mail className="text-white" size={32} />
                             <h3 className="text-xl font-bold text-white">Subscribe Our Weekly Newsletter</h3>
@@ -89,20 +102,24 @@ const Footer = () => {
                                 Subscribe
                             </button>
                         </div>
-                    </div>
+                    </div> */}
 
                     <div className="flex flex-col md:flex-row items-center justify-between gap-6">
                         <p className="text-white/50 text-sm">
                             &copy; 2024 IntelliDiet. All rights reserved.
                         </p>
                         <div className="flex gap-4">
-                            {[Facebook, Twitter, Instagram, Youtube].map((Icon, i) => (
-                                <Link key={i} href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center text-white hover:bg-secondary transition-all">
-                                    <Icon size={18} />
+                            {[
+                                { Icon: Instagram, href: "https://www.instagram.com/dietiitiankavita?igsh=MTE1OXZsNGhjbnhjZg==" },
+                                { Icon: Linkedin, href: "https://www.linkedin.com/in/kavita-nutritionist-dietitian?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
+                            ].map((item, i) => (
+                                <Link key={i} href={item.href} target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center text-white hover:bg-secondary transition-all">
+                                    <item.Icon size={18} />
                                 </Link>
                             ))}
                         </div>
                     </div>
+                    <p className="text-xl text-center text-white font-extrabold">Made With ❤️ Love ❤️ By  <span className="text-2xl ml-1 text-center text-secondary font-extrabold">WellnessZ</span></p>
                 </div>
             </div>
         </footer>
