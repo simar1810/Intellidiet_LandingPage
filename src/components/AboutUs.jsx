@@ -10,9 +10,9 @@ const AboutSection = () => {
           <div className="lg:w-1/2 w-full relative">
             <div className="rounded-3xl overflow-hidden shadow-2xl">
               <img
-                src="http://clipart-library.com/new_gallery/40-400863_women-performing-yoga-with-sun-background-yoga-logo.png"
+                src="/images/kavita-mam.jpeg"
                 alt="About Us"
-                className="w-full h-[400px] object-cover transition-transform duration-500 hover:scale-105"
+                className="w-full h-22 object-cover transition-transform duration-500 hover:scale-105"
               />
             </div>
 
