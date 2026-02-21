@@ -7,38 +7,38 @@ import { Star, Quote } from "lucide-react";
 const Reviews = () => {
     const reviews = [
         {
-            name: "Jean Haley",
-            role: "Nutritionist",
+            name: "Anoop Goel",
+            role: "Customer",
             content:
-                "Working alongside this team has been inspiring. Their evidence-based approach and personalized nutrition strategies truly help clients achieve sustainable and long-lasting health transformations.",
+                "When I met first time with Kavita, I did not believe that I can stay on dieting but after taking her Dietitian Plan, I feel very good, energy level was so high & relaxed. Thanks Kavita for giving this",
             avatar: "https://i.pravatar.cc/150?u=jean",
         },
         {
-            name: "Richard Miles",
-            role: "Healthy Enthusiast",
+            name: "Aisha",
+            role: "Customer",
             content:
-                "I have tried many wellness programs before, but this one genuinely focuses on balanced nutrition, consistency, and realistic lifestyle changes that actually deliver visible results.",
+                "she is the best dietician as she gives nutritious and yummy food in her diet plan. i have reduced 16 kgs in 3 months with her healthy diet plan.She taught me which foods encourage a healthier lifestyle and healthier living.",
             avatar: "https://i.pravatar.cc/150?u=richard",
         },
         {
-            name: "Helen Hill",
+            name: "Sadhana Verma",
             role: "Customer",
             content:
-                "The experience exceeded my expectations completely. The team stayed supportive throughout my journey and helped me build healthier habits that I can confidently maintain long-term.",
+                "I lost 4 kg in 6 weeks due to the diet. I felt various positive changes like my skin is glowing now and I was facing hairfall problem previously now its not there.Will recommend her strongly to all my friends and family.",
             avatar: "https://i.pravatar.cc/150?u=helen",
         },
         {
-            name: "Robert James",
-            role: "Lifestyle Coach",
+            name: "Divya Jindal",
+            role: "Customer",
             content:
-                "The guidance and support I received were exceptional. The program was simple to follow, effective, and helped me feel healthier, stronger, and more confident every day.",
+                "Just fantastic.. she is a great motivator and a coach... just doing great work... i loved to be her client..very easy, tasty and nutritious meals.. very polite and humble person #must visit",
             avatar: "https://i.pravatar.cc/150?u=robert",
         },
         {
-            name: "Sofia Mell",
-            role: "Fitness Expert",
+            name: "Sakshi Sawhney",
+            role: "Customer",
             content:
-                "From personalized meal plans to constant encouragement, everything was thoughtfully designed. I achieved my goals safely and noticed significant improvements in my overall well-being.",
+                "I had a pleasure of meeting Kavita Sharma when I contacted her for nutrition and weight loss counselling. With her program I learned how to understand the food I eat",
             avatar: "https://i.pravatar.cc/150?u=sofia",
         },
     ];
@@ -71,7 +71,7 @@ const Reviews = () => {
 
                 {/* Embla Carousel */}
                 <div className="overflow-hidden" ref={emblaRef}>
-                    <div className="flex gap-8">
+                    <div className="flex gap-8 mb-3">
                         {reviews.map((review, index) => (
                             <div
                                 key={index}
@@ -100,11 +100,11 @@ const Reviews = () => {
                                     </p>
 
                                     <div className="flex items-center gap-4 pt-6 border-t border-gray-50">
-                                        <img
+                                        {/* <img
                                             src={review.avatar}
                                             alt={review.name}
                                             className="w-14 h-14 rounded-full object-cover border-2 border-secondary/20"
-                                        />
+                                        /> */}
                                         <div>
                                             <h4 className="font-bold text-primary">
                                                 {review.name}

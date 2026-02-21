@@ -28,7 +28,7 @@ const Hero = () => {
                         </p>
 
                         <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 -mt-3">
-                            <button onClick={()=>router.push("/contact-us")} className="bg-secondary cursor-pointer hover:bg-orange-600 text-white px-10 py-4 rounded-full font-bold text-lg transition-all shadow-xl hover:shadow-orange-200 hover:-translate-y-1">
+                            <button onClick={()=>router.push("/contact-us")} className="bg-secondary cursor-pointer hover:bg-orange-600 text-white px-10 py-4 rounded-full font-bold text-lg transition-all shadow-xl hover:shadow-orange-200 hover:-translate-y-1 mb-5 ">
                                 Join Now
                             </button>
                         </div>
@@ -36,9 +36,9 @@ const Hero = () => {
 
                     {/* Image Content */}
                     <div className="lg:w-1/2 relative -mt-20">
-                        <div className="relative z-10 w-full max-w-[800px] mx-auto">
-                            {/* Main Image */}
-                            <div className="relative rounded-2xl overflow-hidden">
+                        <div className="relative z-10 w-full max-w-[800px] ">
+                            
+                            <div className="relative rounded-2xl overflow-hidden md: -mt-50">
                                 <Image
                                     src="/images/hero.png"
                                     alt="Healthy Eating"
@@ -49,6 +49,24 @@ const Hero = () => {
                             </div>
                         </div>
                     </div>
+
+                    {/* Image Content */}
+                    {/* <div className="lg:w-1/2 flex justify-center items-start relative">
+  <div className="relative w-full max-w-[800px]">
+    <Image
+      src="/images/hero.png"
+      alt="Healthy Eating"
+      width={800}
+      height={800}
+      className="w-full h-auto rounded-2xl"
+      style={{
+        display: 'block',
+        verticalAlign: 'top', // Crucial for Safari to remove extra bottom space
+      }}
+      priority
+    />
+  </div>
+                    </div> */}
                 </div>
             </div>
 

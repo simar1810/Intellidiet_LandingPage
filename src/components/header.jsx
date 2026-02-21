@@ -26,7 +26,10 @@ export default function Header() {
           <div className="w-20 h-20 rounded-full flex items-center justify-center overflow-hidden transition-transform group-hover:rotate-12 duration-500">
             <Image src="/images/logo.png" alt="InteliDiet Logo" className="w-full h-full object-contain p-1" width={80} height={80} />
           </div>
-          <span className={`${scrolled ? '!text-white' : '!text-black'} text-xl md:text-2xl font-bold tracking-widest uppercase`}>InteliDiet</span>
+          <span className="text-xl md:text-2xl font-bold tracking-widest uppercase italic ">
+            <span className={`${scrolled ? 'text-white/90' : 'text-primary'}`}>Inteli </span>
+            <span style={{ color: "#f59e0b" }}>Diet</span>
+          </span>
         </Link>
 
         {/* Desktop Nav */}
@@ -34,13 +37,18 @@ export default function Header() {
           <Link href="/" className={` ${scrolled ? 'text-white/90' : 'text-black/90'}  hover:text-[#84bd00] transition-colors text-sm uppercase tracking-widest font-medium relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-[#84bd00] after:transition-all hover:after:w-full`}>
             Home
           </Link>
-          <Link href="/privacy-policy" className={`${scrolled ? 'text-white/90' : 'text-black/90'}  hover:text-[#84bd00] transition-colors text-sm uppercase tracking-widest font-medium relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-[#84bd00] after:transition-all hover:after:w-full`}>
+          {/* <Link href="/privacy-policy" className={`${scrolled ? 'text-white/90' : 'text-black/90'}  hover:text-[#84bd00] transition-colors text-sm uppercase tracking-widest font-medium relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-[#84bd00] after:transition-all hover:after:w-full`}>
             Privacy
           </Link>
           <Link href="/terms-and-conditions" className={`${scrolled ? 'text-white/90' : 'text-black/90'} hover:text-[#84bd00] transition-colors text-sm uppercase tracking-widest font-medium relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-[#84bd00] after:transition-all hover:after:w-full`}>
             Terms
-          </Link>
-          <Link href="/#services" className={`${scrolled ? 'text-white/90' : 'text-black/90'} hover:text-[#84bd00] transition-colors text-sm uppercase tracking-widest font-medium relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-[#84bd00] after:transition-all hover:after:w-full`}>
+          </Link> */}
+          <Link href="/#services" onClick={(e) => {
+             if (window.location.pathname === "/") {
+              e.preventDefault();
+              const section = document.getElementById("services");
+              section?.scrollIntoView({ behavior: "smooth" });}}}
+              className={`${scrolled ? 'text-white/90' : 'text-black/90'} hover:text-[#84bd00] transition-colors text-sm uppercase tracking-widest font-medium relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-[#84bd00] after:transition-all hover:after:w-full`}>
             Services
           </Link>
           {/* <Link href="/" className={`${scrolled ? 'text-white/90' : 'text-black/90'} hover:text-[#84bd00] transition-colors text-sm uppercase tracking-widest font-medium relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-[#84bd00] after:transition-all hover:after:w-full`}>
@@ -71,7 +79,13 @@ export default function Header() {
           <Link href="/terms-and-conditions" className="text-white text-lg font-medium hover:text-[#84bd00] text-center" onClick={() => setIsMenuOpen(false)}>
             Terms & Conditions
           </Link>
-          <Link href="/#services" className="text-white text-lg font-medium hover:text-[#84bd00] text-center" onClick={() => setIsMenuOpen(false)}>
+          <Link href="/#services"  className="text-white text-lg font-medium hover:text-[#84bd00] text-center" onClick={(e) => {
+            if (window.location.pathname === "/") {
+              e.preventDefault();
+              const section = document.getElementById("services");
+              section?.scrollIntoView({ behavior: "smooth" });
+            }
+         setIsMenuOpen(false);}}>
             Services
           </Link>
           {/* <Link href="/" className="text-white text-lg font-medium hover:text-[#84bd00] text-center" onClick={() => setIsMenuOpen(false)}>

@@ -18,7 +18,7 @@ const NutritionBible = () => {
                         </div>
 
                         {/* Small floating image with play button */}
-                        <div className="absolute bottom-0 left-10 w-64 h-48 rounded-3xl overflow-hidden border-8 border-white shadow-2xl z-20 group cursor-pointer">
+                        {/* <div className="absolute bottom-0 left-10 w-64 h-48 rounded-3xl overflow-hidden border-8 border-white shadow-2xl z-20 group cursor-pointer">
                             <img
                                 src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&q=80&w=400"
                                 alt="Recipe"
@@ -29,7 +29,7 @@ const NutritionBible = () => {
                                     <Play fill="white" size={20} className="ml-1" />
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
 
                     {/* Right: Content */}

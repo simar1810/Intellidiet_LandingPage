@@ -10,7 +10,7 @@ const Footer = () => {
     const navLinks = [
         { title: "Home", href: "#home" },
         { title: "About", href: "#about" },
-        { title: "Services", href: "#services" },
+        { title: "Services", href: "/#services" },
         // { title: "Portfolio", href: "#portfolio" },
         { title: "Contact Us", href: "/contact-us" },
         { title: "Privacy Policy", href: "/privacy-policy" },
@@ -49,7 +49,12 @@ const Footer = () => {
                         <ul className="space-y-4">
                             {navLinks.map((link) => (
                                 <li key={link.title}>
-                                    <Link href={link.href} className="text-white/70 hover:text-secondary flex items-center gap-2 group">
+                                    <Link href={link.href} className="text-white/70 hover:text-secondary flex items-center gap-2 group" onClick={(e) => {
+                                        // Check if it's an internal anchor link
+                                      if (link.href.startsWith("/#") && window.location.pathname === "/") {
+                                         e.preventDefault();
+                                         const section = document.getElementById(link.href.replace("/#", ""));
+                                         section?.scrollIntoView({ behavior: "smooth" });}}}>
                                         <span className="w-1.5 h-1.5 rounded-full bg-secondary scale-0 group-hover:scale-100 transition-transform"></span>
                                         {link.title}
                                     </Link>
@@ -66,14 +71,14 @@ const Footer = () => {
                                 <MapPin className="text-secondary shrink-0" size={24} />
                                 <p className="text-white/70">123 Street, New York, USA</p>
                             </div> */}
-                            <div className="flex gap-4">
+                            <a href="tel:9625691566" className="flex gap-4 hover:underline">
                                 <Phone className="text-secondary shrink-0" size={24} />
                                 <p className="text-white/70">96256 91566</p>
-                            </div>
-                            <div className="flex gap-4">
+                            </a>
+                            <a href="mailto:nutricurediet@gmail.com" className="flex gap-4 hover:underline break-all">
                                 <Mail className="text-secondary shrink-0" size={24} />
                                 <p className="text-white/70">nutricurediet@gmail.com</p>
-                            </div>
+                            </a>
                         </div>
                     </div>
 
@@ -119,7 +124,17 @@ const Footer = () => {
                             ))}
                         </div>
                     </div>
-                    <p className="text-xl text-center text-white font-extrabold">Made With ❤️ Love ❤️ By  <span className="text-2xl ml-1 text-center text-secondary font-extrabold">WellnessZ</span></p>
+                   {/* <p className="flex flex-row flex-wrap items-center justify-center gap-2 text-white text-xl font-extrabold text-center">
+                    Made with <span className="mx-1 text-red-500">❤️</span> by 
+                    <img src="https://wellnessz.in/images/WellnessZ.svg" alt="WellnessZ Logo" className="h-5 md:h-7 mx-2 inline-block"/>
+                    in India </p> */}
+
+                  <p className="flex flex-row flex-wrap items-center justify-center gap-2 text-white md:text-xl text:sm font-extrabold text-center">
+                  Made with <span className="mx-1 text-red-500">❤️</span> by 
+                  <img src="https://wellnessz.in/images/WellnessZ.svg" alt="WellnessZ Logo" className="h-3 md:h-7 mx-2 inline-block"/>
+                  in India 
+                  <img src="https://flagcdn.com/w40/in.png" alt="India Flag" className="h-5 md:h-6 inline-block ml-1 shadow-sm" />
+                 </p>
                 </div>
             </div>
         </footer>

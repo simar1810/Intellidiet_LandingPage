@@ -53,16 +53,16 @@ const WhyChooseUs = () => {
                             key={index}
                             className={`p-8 rounded-3xl border border-gray-100 transition-all duration-300 hover:shadow-xl hover:-translate-y-2 group`}
                         >
-                            <div className={`${item.color} ${item.iconColor} w-16 h-16 rounded-4xl flex items-center justify-center mb-6 ml-55 transition-transform group-hover:rotate-12`}>
+                            <div className={`${item.color} ${item.iconColor} w-16 h-16 rounded-4xl flex items-center justify-center mb-6 mx-auto transition-transform group-hover:rotate-12`}>
                                 {item.icon}
                             </div>
                             <h3 className="text-xl font-bold text-primary mb-4">{item.title}</h3>
                             <p className="text-gray-500 line-clamp-3 mb-6">
                                 {item.description}
                             </p>
-                            <button className="text-secondary font-bold hover:underline">
+                            {/* <button className="text-secondary font-bold hover:underline">
                                 Learn More
-                            </button>
+                            </button> */}
                         </div>
                     ))}
                 </div>

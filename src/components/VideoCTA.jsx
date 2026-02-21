@@ -14,11 +14,11 @@ const VideoCTA = () => {
 
             {/* Content */}
             <div className="relative z-10 text-center space-y-8 px-4">
-                <button className="w-24 h-24 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center group hover:scale-110 transition-transform duration-500">
+                {/* <button className="w-24 h-24 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center group hover:scale-110 transition-transform duration-500">
                     <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center text-secondary shadow-2xl">
                         <Play fill="currentColor" size={32} className="ml-1" />
                     </div>
-                </button>
+                </button> */}
 
                 <h2 className="text-3xl md:text-5xl font-bold text-white max-w-4xl mx-auto leading-tight italic text-center">                    
                     Transform Your Health With <br /> <span className="flex flex-col md:flex-row items-center justify-center text-[#92BC34] gap-3 md:gap-5 mt-4">
