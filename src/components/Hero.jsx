@@ -65,7 +65,7 @@ const Hero = () => {
             className="lg:w-1/2 relative order-1 lg:order-2"
           >
             <div className="relative z-10 w-full max-w-[800px] mx-auto min-w-0">
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+              <div className="relative rounded-2xl overflow-hidden">
                 <Image
                   src="/images/hero.png"
                   alt="Healthy Eating - InteliDiet"
