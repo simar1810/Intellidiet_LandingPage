@@ -3,6 +3,7 @@ import React from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import { Star, Quote } from "lucide-react";
+import { motion } from "framer-motion";
 
 const Reviews = () => {
     const reviews = [
@@ -49,35 +50,32 @@ const Reviews = () => {
     );
 
     return (
-        <section className="py-24 bg-white relative overflow-hidden">
-            {/* Decorative leaves */}
-            <div className="absolute -left-10 top-1/4 w-32 h-32 opacity-40">
-                <img src="/images/leaf3.png" alt="leaf" />
+        <section className="py-16 sm:py-20 md:py-24 bg-white relative overflow-hidden">
+            <div className="absolute -left-6 sm:-left-10 top-1/4 w-20 h-20 sm:w-32 sm:h-32 opacity-30 sm:opacity-40 pointer-events-none">
+                <img src="/images/leaf3.png" alt="" />
             </div>
-            <div className="absolute -right-10 bottom-1/4 w-32 h-32 opacity-40 rotate-180">
-                <img src="/images/leaf3.png" alt="leaf" />
+            <div className="absolute -right-6 sm:-right-10 bottom-1/4 w-20 h-20 sm:w-32 sm:h-32 opacity-30 sm:opacity-40 rotate-180 pointer-events-none">
+                <img src="/images/leaf3.png" alt="" />
             </div>
 
-            <div className="container mx-auto px-4">
-                <div className="text-center mb-16 space-y-4">
-                    <h2 className="text-4xl md:text-5xl font-bold text-primary">
-                        Featured Customer{" "}
-                        <span className="text-secondary">Review</span>
+            <div className="container mx-auto px-4 md:px-6 max-w-6xl">
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-10 sm:mb-16 space-y-4">
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary px-2">
+                        Featured Customer <span className="text-secondary">Reviews</span>
                     </h2>
-                    <p className="text-gray-500 max-w-2xl mx-auto">
-                         Real stories from clients who transformed their health successfully.
+                    <p className="text-gray-500 max-w-2xl mx-auto text-sm sm:text-base px-2">
+                        Real stories from clients who transformed their health successfully.
                     </p>
-                </div>
+                </motion.div>
 
-                {/* Embla Carousel */}
-                <div className="overflow-hidden" ref={emblaRef}>
-                    <div className="flex gap-8 mb-3">
+                <div className="overflow-hidden -mx-2 sm:mx-0" ref={emblaRef}>
+                    <div className="flex gap-4 sm:gap-6 md:gap-8 mb-3 px-2 sm:px-0">
                         {reviews.map((review, index) => (
                             <div
                                 key={index}
-                                className="flex-[0_0_100%] md:flex-[0_0_50%] lg:flex-[0_0_33.333%]"
+                                className="flex-[0_0_85%] sm:flex-[0_0_100%] md:flex-[0_0_50%] lg:flex-[0_0_33.333%] min-w-0"
                             >
-                                <div className="p-10 rounded-[2.5rem] border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-500 bg-white group h-full">
+                                <div className="p-5 sm:p-6 md:p-10 rounded-2xl sm:rounded-[2.5rem] border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-500 bg-white group h-full min-h-[280px] flex flex-col">
                                     <div className="mb-6 flex justify-between items-start">
                                         <div className="flex gap-1">
                                             {[...Array(5)].map((_, i) => (

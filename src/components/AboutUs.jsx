@@ -1,48 +1,56 @@
+"use client";
 import React from "react";
+import { motion } from "framer-motion";
 
 const AboutSection = () => {
   return (
-    <section className="bg-primary py-24" id="about">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-20">
+    <section className="bg-primary py-16 sm:py-20 md:py-24 overflow-hidden" id="about">
+      <div className="container mx-auto px-4 md:px-6 max-w-6xl">
+        <div className="flex flex-col lg:flex-row items-center gap-10 sm:gap-14 lg:gap-20 min-w-0">
 
-          {/* Image Side */}
-          <div className="lg:w-1/2 w-full relative">
-            <div className="rounded-3xl overflow-hidden shadow-2xl">
+          {/* Image Side - full client photo, no cropping */}
+          <motion.div
+            initial={{ opacity: 0, x: -40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="lg:w-1/2 w-full relative flex justify-center"
+          >
+            <div className="rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl w-full max-w-sm sm:max-w-md aspect-[3/4] flex items-center justify-center bg-primary/20 min-w-0">
               <img
                 src="/images/kavita-mam.jpeg"
-                alt="About Us"
-                className="w-full h-22 object-cover transition-transform duration-500 hover:scale-105"
+                alt="Dr. Kavita - InteliDiet Dietitian"
+                className="w-full h-full object-contain object-center transition-transform duration-500 hover:scale-[1.02]"
               />
             </div>
-
-            {/* Decorative background element */}
-            <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-secondary rounded-full blur-3xl opacity-30"></div>
-          </div>
+            <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-secondary rounded-full blur-3xl opacity-30 pointer-events-none" />
+          </motion.div>
 
           {/* Text Side */}
-          <div className="lg:w-1/2 w-full text-white flex flex-col">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+          <motion.div
+            initial={{ opacity: 0, x: 40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="lg:w-1/2 w-full text-white flex flex-col"
+          >
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 leading-tight">
               About <span className="text-secondary">Dr. Kavita</span>
             </h2>
 
-            <p className="text-white/80 mb-6 text-lg leading-relaxed text-justify">
+            <p className="text-white/80 mb-4 sm:mb-6 text-base sm:text-lg leading-relaxed text-justify">
               Dr. Kavita is a passionate and certified dietitian dedicated to
               transforming lives through personalized nutrition guidance.
               With years of experience, she helps clients achieve sustainable
               health goals and build long-term healthy habits.
             </p>
 
-            <p className="text-white/80 mb-10 text-lg leading-relaxed text-justify">
+            <p className="text-white/80 mb-8 sm:mb-10 text-base sm:text-lg leading-relaxed text-justify">
               Her approach focuses on balanced eating, practical lifestyle
               changes, and empowering individuals with knowledge to take
               control of their well-being.
             </p>
-
-            {/* <button className="bg-secondary hover:bg-secondary/90 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 shadow-lg self-start lg:w-4">
-              Learn More
-            </button> */}
-          </div>
+          </motion.div>
 
         </div>
       </div>

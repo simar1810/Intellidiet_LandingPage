@@ -1,4 +1,4 @@
-import Header from "@/components/Header";
+import Header from "@/components/header";
 import Hero from "@/components/Hero";
 import Newsletter from "@/components/Newsletter";
 import WhyChooseUs from "@/components/WhyChooseUs";
@@ -12,7 +12,7 @@ import AboutSection from "@/components/AboutUs";
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen min-w-0 overflow-x-hidden">
       <Header />
       <Hero />
       {/* <Newsletter /> */}

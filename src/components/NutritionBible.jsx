@@ -1,21 +1,27 @@
 "use client";
 import React from "react";
-import { Play } from "lucide-react";
+import { motion } from "framer-motion";
 
 const NutritionBible = () => {
-    return (
-        <section className="py-24 bg-white overflow-hidden relative">
-            <div className="container mx-auto px-4 md:px-6">
-                <div className="flex flex-col lg:flex-row items-center gap-16">
-                    {/* Left: Images */}
-                    <div className="lg:w-1/2 relative mt-10">
-                        <div className="relative z-10 rounded-[3rem] overflow-hidden shadow-2xl">
-                            <img
-                                src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&q=80&w=800"
-                                alt="Nutrition"
-                                className="w-full h-auto object-cover"
-                            />
-                        </div>
+  return (
+    <section className="py-16 sm:py-20 md:py-24 bg-white overflow-hidden relative" id="nutrition">
+      <div className="container mx-auto px-4 md:px-6 max-w-6xl">
+        <div className="flex flex-col lg:flex-row items-center gap-10 sm:gap-14 lg:gap-16 min-w-0">
+          {/* Left: Images */}
+          <motion.div
+            initial={{ opacity: 0, x: -32 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 0.6 }}
+            className="lg:w-1/2 relative mt-6 lg:mt-10 w-full min-w-0"
+          >
+            <div className="relative z-10 rounded-2xl sm:rounded-[2.5rem] md:rounded-[3rem] overflow-hidden shadow-2xl">
+              <img
+                src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&q=80&w=800"
+                alt="Nutrition"
+                className="w-full h-auto object-cover"
+              />
+            </div>
 
                         {/* Small floating image with play button */}
                         {/* <div className="absolute bottom-0 left-10 w-64 h-48 rounded-3xl overflow-hidden border-8 border-white shadow-2xl z-20 group cursor-pointer">
@@ -30,15 +36,21 @@ const NutritionBible = () => {
                                 </div>
                             </div>
                         </div> */}
-                    </div>
+          </motion.div>
 
-                    {/* Right: Content */}
-                    <div className="lg:w-1/2 space-y-8 relative">
-                        <div className="space-y-4">
-                            <p className="text-orange-500 font-bold tracking-widest uppercase text-sm">Intelligent</p>
-                            <h2 className="text-4xl md:text-5xl font-bold text-primary leading-tight">
-                                Special Female Programs
-                            </h2>
+          {/* Right: Content */}
+          <motion.div
+            initial={{ opacity: 0, x: 32 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 0.6 }}
+            className="lg:w-1/2 space-y-6 sm:space-y-8 relative min-w-0"
+          >
+            <div className="space-y-4">
+              <p className="text-orange-500 font-bold tracking-widest uppercase text-sm">Intelligent</p>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-primary leading-tight">
+                Special Female Programs
+              </h2>
                             <p className="text-gray-500 leading-relaxed">
                                 Tailored programs designed specifically for women, focusing on health, fitness, and overall wellness to help achieve personal goals safely and effectively.
                             </p>
@@ -102,14 +114,14 @@ const NutritionBible = () => {
                         </div>
 
                         {/* Decorative leaf on the right bottom */}
-                        <div className="absolute bottom-[-65px] right-0 w-40 h-40">
-                            <img src="/images/leaf2.png" alt="Leaf" className="w-full h-full object-contain" />
-                        </div>
-                    </div>
-                </div>
+            <div className="absolute bottom-[-65px] right-0 w-40 h-40">
+              <img src="/images/leaf2.png" alt="Leaf" className="w-full h-full object-contain" />
             </div>
-        </section>
-    );
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default NutritionBible;

@@ -1,144 +1,146 @@
 "use client";
 import React from "react";
-import Image from "next/image";
 import Link from "next/link";
-import { Facebook, Twitter, Instagram, Youtube, Mail, MapPin, Phone, Linkedin } from "lucide-react";
+import Image from "next/image";
+import { Mail, Phone, Instagram, Linkedin } from "lucide-react";
 import { useRouter } from "next/navigation";
 
+const navLinks = [
+  { title: "Home", href: "/#home" },
+  { title: "About Us", href: "/#about" },
+  { title: "Services", href: "/#services" },
+  { title: "Contact Us", href: "/contact-us" },
+  { title: "Privacy Policy", href: "/privacy-policy" },
+  { title: "Terms & Conditions", href: "/terms-and-conditions" },
+];
+
+const socialLinks = [
+  { Icon: Instagram, href: "https://www.instagram.com/dietiitiankavita?igsh=MTE1OXZsNGhjbnhjZg==", label: "Instagram" },
+  { Icon: Linkedin, href: "https://www.linkedin.com/in/kavita-nutritionist-dietitian?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app", label: "LinkedIn" },
+];
+
 const Footer = () => {
+  const router = useRouter();
 
-    const navLinks = [
-        { title: "Home", href: "#home" },
-        { title: "About", href: "#about" },
-        { title: "Services", href: "/#services" },
-        // { title: "Portfolio", href: "#portfolio" },
-        { title: "Contact Us", href: "/contact-us" },
-        { title: "Privacy Policy", href: "/privacy-policy" },
-        { title: "Terms & Conditions", href: "/terms-and-conditions" },];
+  const handleNavClick = (e, href) => {
+    if (href.startsWith("/#") && typeof window !== "undefined" && window.location.pathname === "/") {
+      e.preventDefault();
+      const id = href.replace("/#", "");
+      document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
-    const router = useRouter();
+  return (
+    <footer className="bg-primary relative overflow-hidden">
+      {/* Subtle decorative background */}
+      <div className="absolute inset-0 pointer-events-none opacity-[0.07]" aria-hidden>
+        <img src="/images/leaf4.png" alt="" className="absolute -top-12 -right-12 w-48 h-48 object-contain" />
+      </div>
 
-    return (
-        <footer className="bg-primary pt-24 pb-12 relative overflow-hidden">
-            {/* Decorative leaf */}
-            <div className="absolute right-100 top-5 w-64 h-64 opacity-10 pointer-events-none transform translate-x-1/2 -translate-y-1/2">
-                <img src="images/leaf4.png" alt="leaf" />
+      <div className="container mx-auto px-4 md:px-6 max-w-6xl pt-12 sm:pt-16 pb-6 sm:pb-8 md:pt-20 md:pb-10 relative">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-10 md:gap-10 lg:gap-16 mb-10 sm:mb-14">
+          <div className="space-y-4 sm:space-y-5 max-w-sm">
+            <Link href="/" className="inline-flex items-center gap-3 group">
+              <span className="relative w-12 h-12 rounded-full overflow-hidden bg-white/10 flex-shrink-0">
+                <Image src="/images/logo.png" alt="" width={48} height={48} className="object-contain p-1" />
+              </span>
+              <span className="text-2xl font-bold text-white tracking-tight">InteliDiet</span>
+            </Link>
+            <p className="text-white/75 text-sm leading-relaxed">
+              Your partner in personalized nutrition and lasting wellness.
+            </p>
+            <button
+              type="button"
+              onClick={() => router.push("/contact-us")}
+              className="inline-flex items-center bg-secondary text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-secondary/90 active:scale-[0.98] transition-all duration-200"
+            >
+              Join Now
+            </button>
+          </div>
+
+          {/* Links */}
+          <div>
+            <h3 className="text-white font-semibold text-sm uppercase tracking-widest mb-5 opacity-90">
+              Quick Links
+            </h3>
+            <nav aria-label="Footer navigation">
+              <ul className="space-y-3">
+                {navLinks.map((link) => (
+                  <li key={link.title}>
+                    <Link
+                      href={link.href}
+                      onClick={(e) => handleNavClick(e, link.href)}
+                      className="text-white/75 hover:text-secondary text-sm transition-colors duration-200 focus:outline-none focus:text-secondary"
+                    >
+                      {link.title}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          </div>
+
+          {/* Contact */}
+          <div>
+            <h3 className="text-white font-semibold text-sm uppercase tracking-widest mb-5 opacity-90">
+              Contact
+            </h3>
+            <div className="space-y-4">
+              <a
+                href="tel:9625691566"
+                className="flex items-center gap-3 text-white/75 hover:text-secondary text-sm transition-colors duration-200 focus:outline-none focus:text-secondary"
+              >
+                <span className="flex-shrink-0 w-9 h-9 rounded-full bg-white/10 flex items-center justify-center">
+                  <Phone size={16} className="text-secondary" />
+                </span>
+                96256 91566
+              </a>
+              <a
+                href="mailto:nutricurediet@gmail.com"
+                className="flex items-center gap-3 text-white/75 hover:text-secondary text-sm transition-colors duration-200 break-all focus:outline-none focus:text-secondary"
+              >
+                <span className="flex-shrink-0 w-9 h-9 rounded-full bg-white/10 flex items-center justify-center">
+                  <Mail size={16} className="text-secondary" />
+                </span>
+                nutricurediet@gmail.com
+              </a>
             </div>
+          </div>
+        </div>
 
-            <div className="container mx-auto px-4 md:px-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
-                    {/* Brand Column */}
-                    <div className="space-y-8">
-                        <h2 className="text-3xl font-bold text-white flex items-center gap-2">
-                            <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center">
-                                <img src="images/logo.png" className="w-full h-full"/>
-                            </div>
-                            IntelliDiet
-                        </h2>
-                        <p className="text-white/70 leading-relaxed">
-                            Don't Be a Stranger, Let'd Do Something Amazing Toghether...
-                        </p>
-                        <button onClick={() => router.push("/contact-us")} className="cursor-pointer bg-secondary text-white px-8 py-3 rounded-full font-bold hover:shadow-lg transition-all">
-                            Join Now
-                        </button>
-                    </div>
+        {/* Bottom bar */}
+        <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="text-white/50 text-xs order-2 sm:order-1">
+            &copy; 2026 InteliDiet. All rights reserved.
+          </p>
+          <div className="flex items-center gap-2 order-1 sm:order-2">
+            {socialLinks.map(({ Icon, href, label }) => (
+              <Link
+                key={label}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={label}
+                className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-secondary hover:text-white transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2 focus:ring-offset-primary"
+              >
+                <Icon size={16} />
+              </Link>
+            ))}
+          </div>
+        </div>
 
-                    {/* Useful Links */}
-                    <div className="space-y-8 lg:ml-12">
-                        <h4 className="text-xl font-bold text-white uppercase tracking-wider">Useful Links</h4>
-                        <ul className="space-y-4">
-                            {navLinks.map((link) => (
-                                <li key={link.title}>
-                                    <Link href={link.href} className="text-white/70 hover:text-secondary flex items-center gap-2 group" onClick={(e) => {
-                                        // Check if it's an internal anchor link
-                                      if (link.href.startsWith("/#") && window.location.pathname === "/") {
-                                         e.preventDefault();
-                                         const section = document.getElementById(link.href.replace("/#", ""));
-                                         section?.scrollIntoView({ behavior: "smooth" });}}}>
-                                        <span className="w-1.5 h-1.5 rounded-full bg-secondary scale-0 group-hover:scale-100 transition-transform"></span>
-                                        {link.title}
-                                    </Link>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-
-                    {/* Contact Us */}
-                    <div className="space-y-8">
-                        <h4 className="text-xl font-bold text-white uppercase tracking-wider">Contact Us</h4>
-                        <div className="space-y-6">
-                            {/* <div className="flex gap-4">
-                                <MapPin className="text-secondary shrink-0" size={24} />
-                                <p className="text-white/70">123 Street, New York, USA</p>
-                            </div> */}
-                            <a href="tel:9625691566" className="flex gap-4 hover:underline">
-                                <Phone className="text-secondary shrink-0" size={24} />
-                                <p className="text-white/70">96256 91566</p>
-                            </a>
-                            <a href="mailto:nutricurediet@gmail.com" className="flex gap-4 hover:underline break-all">
-                                <Mail className="text-secondary shrink-0" size={24} />
-                                <p className="text-white/70">nutricurediet@gmail.com</p>
-                            </a>
-                        </div>
-                    </div>
-
-                    {/* Decorative image/leaf in footer column 4 */}
-                    <div className="relative">
-                        <div className="absolute right-0 bottom-0 w-48 h-48 opacity-20 rotate-45">
-                            <img src="images/leaf3.png" alt="leaf" className="w-full h-full object-contain" />
-                        </div>
-                    </div>
-                </div>
-
-                {/* Newsletter & Copyright */}
-                <div className="pt-12 border-t border-white/10 space-y-8">
-                    {/* <div className="flex flex-col lg:flex-row items-center justify-between gap-8 bg-white/5 p-6 rounded-[2rem] border border-white/10">
-                        <div className="flex items-center gap-4">
-                            <Mail className="text-white" size={32} />
-                            <h3 className="text-xl font-bold text-white">Subscribe Our Weekly Newsletter</h3>
-                        </div>
-                        <div className="w-full lg:w-1/2 flex bg-white rounded-full overflow-hidden p-1">
-                            <input
-                                type="email"
-                                placeholder="Enter your email address..."
-                                className="flex-1 px-6 py-3 text-gray-800 focus:outline-none"
-                            />
-                            <button className="bg-secondary text-white px-8 py-3 rounded-full font-bold uppercase tracking-wider text-sm transition-all hover:bg-orange-600">
-                                Subscribe
-                            </button>
-                        </div>
-                    </div> */}
-
-                    <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-                        <p className="text-white/50 text-sm">
-                            &copy; 2024 IntelliDiet. All rights reserved.
-                        </p>
-                        <div className="flex gap-4">
-                            {[
-                                { Icon: Instagram, href: "https://www.instagram.com/dietiitiankavita?igsh=MTE1OXZsNGhjbnhjZg==" },
-                                { Icon: Linkedin, href: "https://www.linkedin.com/in/kavita-nutritionist-dietitian?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
-                            ].map((item, i) => (
-                                <Link key={i} href={item.href} target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center text-white hover:bg-secondary transition-all">
-                                    <item.Icon size={18} />
-                                </Link>
-                            ))}
-                        </div>
-                    </div>
-                   {/* <p className="flex flex-row flex-wrap items-center justify-center gap-2 text-white text-xl font-extrabold text-center">
-                    Made with <span className="mx-1 text-red-500">❤️</span> by 
-                    <img src="https://wellnessz.in/images/WellnessZ.svg" alt="WellnessZ Logo" className="h-5 md:h-7 mx-2 inline-block"/>
-                    in India </p> */}
-
-                  <p className="flex flex-row flex-wrap items-center justify-center gap-2 text-white md:text-xl text:sm font-extrabold text-center">
-                  Made with <span className="mx-1 text-red-500">❤️</span> by 
-                  <img src="https://wellnessz.in/images/WellnessZ.svg" alt="WellnessZ Logo" className="h-3 md:h-7 mx-2 inline-block"/>
-                  in India 
-                  <img src="https://flagcdn.com/w40/in.png" alt="India Flag" className="h-5 md:h-6 inline-block ml-1 shadow-sm" />
-                 </p>
-                </div>
-            </div>
-        </footer>
-    );
+        {/* Credits */}
+        <p className="mt-6 text-center text-white/40 text-xs flex flex-wrap items-center justify-center gap-1.5">
+          Made with <span className="text-red-400">❤️</span> by{" "}
+          <a href="https://wellnessz.in" target="_blank" rel="noopener noreferrer" className="hover:text-white/60 transition-colors">
+            <img src="https://wellnessz.in/images/WellnessZ.svg" alt="WellnessZ" className="h-3.5 inline-block mx-0.5 align-middle" />
+          </a>{" "}
+          in India{" "}
+          <img src="https://flagcdn.com/w40/in.png" alt="" className="h-3.5 inline-block align-middle ml-0.5" />
+        </p>
+      </div>
+    </footer>
+  );
 };
 
 export default Footer;

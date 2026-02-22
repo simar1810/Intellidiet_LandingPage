@@ -1,5 +1,6 @@
 import { Outfit, Inter } from "next/font/google";
 import "./globals.css";
+import WhatsAppFloat from "@/components/WhatsAppFloat";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -23,6 +24,7 @@ export default function RootLayout({ children }) {
         className={`${outfit.variable} ${inter.variable} font-sans antialiased`}
       >
         {children}
+        <WhatsAppFloat />
       </body>
     </html>
   );
