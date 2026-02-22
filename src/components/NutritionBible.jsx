@@ -8,7 +8,7 @@ const NutritionBible = () => {
             <div className="container mx-auto px-4 md:px-6">
                 <div className="flex flex-col lg:flex-row items-center gap-16">
                     {/* Left: Images */}
-                    <div className="lg:w-1/2 relative">
+                    <div className="lg:w-1/2 relative mt-10">
                         <div className="relative z-10 rounded-[3rem] overflow-hidden shadow-2xl">
                             <img
                                 src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&q=80&w=800"
@@ -18,7 +18,7 @@ const NutritionBible = () => {
                         </div>
 
                         {/* Small floating image with play button */}
-                        <div className="absolute bottom-0 left-10 w-64 h-48 rounded-3xl overflow-hidden border-8 border-white shadow-2xl z-20 group cursor-pointer">
+                        {/* <div className="absolute bottom-0 left-10 w-64 h-48 rounded-3xl overflow-hidden border-8 border-white shadow-2xl z-20 group cursor-pointer">
                             <img
                                 src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&q=80&w=400"
                                 alt="Recipe"
@@ -29,7 +29,7 @@ const NutritionBible = () => {
                                     <Play fill="white" size={20} className="ml-1" />
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
 
                     {/* Right: Content */}
@@ -37,36 +37,56 @@ const NutritionBible = () => {
                         <div className="space-y-4">
                             <p className="text-orange-500 font-bold tracking-widest uppercase text-sm">Intelligent</p>
                             <h2 className="text-4xl md:text-5xl font-bold text-primary leading-tight">
-                                The Nutrition Bible
+                                Special Female Programs
                             </h2>
                             <p className="text-gray-500 leading-relaxed">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Tailored programs designed specifically for women, focusing on health, fitness, and overall wellness to help achieve personal goals safely and effectively.
                             </p>
                         </div>
 
                         <div className="space-y-6">
                             <div className="flex gap-4">
                                 <div className="flex-shrink-0 w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center text-secondary">
-                                    <img src="/images/meat-icon.png" alt="Meat Icon" className="w-6 h-6" />
+                                    <img src="/images/pregnancy-icon.webp" alt="Meat Icon" className="w-10 h-10" />
                                 </div>
                                 <div>
-                                    <h4 className="font-bold text-primary mb-1 text-lg">Meat</h4>
-                                    <p className="text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut aliqua.</p>
+                                    <h4 className="font-bold text-primary mb-1 text-lg">Post Pregnancy weight loss programs</h4>
+                                    <p className="text-gray-500">Designed to help new mothers to safely lose weight and regain strength and proper weight after pregnancy.</p>
                                 </div>
                             </div>
 
                             <div className="flex gap-4">
                                 <div className="flex-shrink-0 w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center text-secondary">
-                                    <img src="/images/milk-icon.png" alt="Milk Icon" className="w-6 h-6" />
+                                    <img src="/images/hormone-health.png" alt="Milk Icon" className="w-10 h-10" />
                                 </div>
                                 <div>
-                                    <h4 className="font-bold text-primary mb-1 text-lg">Milk</h4>
-                                    <p className="text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut aliqua.</p>
+                                    <h4 className="font-bold text-primary mb-1 text-lg">Hormone health programs</h4>
+                                    <p className="text-gray-500">Personalized programs designed to balance hormones naturally and improve overall health and well-being.</p>
+                                </div>
+                            </div>
+
+                            <div className="flex gap-4">
+                                <div className="flex-shrink-0 w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center text-secondary">
+                                    <img src="/images/women-nutri.png" alt="Milk Icon" className="w-10 h-10" />
+                                </div>
+                                <div>
+                                    <h4 className="font-bold text-primary mb-1 text-lg">Women's Overall Nutrition Plan</h4>
+                                    <p className="text-gray-500">Comprehensive nutrition plans designed to support women’s health, boost energy levels, and promote long-term wellness.</p>
+                                </div>
+                            </div>
+
+                            <div className="flex gap-4">
+                                <div className="flex-shrink-0 w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center text-secondary">
+                                    <img src="/images/weight-loss.png" alt="Milk Icon" className="w-10 h-10" />
+                                </div>
+                                <div>
+                                    <h4 className="font-bold text-primary mb-1 text-lg">Weight Loss programs</h4>
+                                    <p className="text-gray-500"> Customized weight loss programs designed to burn fat safely, boost metabolism, and support sustainable healthy results.</p>
                                 </div>
                             </div>
                         </div>
 
-                        <div className="pt-4 flex items-center gap-6">
+                        {/* <div className="pt-4 flex items-center gap-6">
                             <button className="bg-secondary hover:bg-orange-600 text-white px-10 py-4 rounded-full font-bold transition-all shadow-lg">
                                 View Courses
                             </button>
@@ -74,7 +94,7 @@ const NutritionBible = () => {
                                 <span className="font-bold text-primary">Liam Oliver</span>
                                 <span className="text-xs text-gray-400">Founder & CEO of Qetus</span>
                             </div>
-                        </div>
+                        </div> */}
 
                         {/* Decorative leaf on the right */}
                         <div className="absolute -top-10 right-0 w-32 h-32">
@@ -82,7 +102,7 @@ const NutritionBible = () => {
                         </div>
 
                         {/* Decorative leaf on the right bottom */}
-                        <div className="absolute bottom-0 right-0 w-40 h-40">
+                        <div className="absolute bottom-[-65px] right-0 w-40 h-40">
                             <img src="/images/leaf2.png" alt="Leaf" className="w-full h-full object-contain" />
                         </div>
                     </div>

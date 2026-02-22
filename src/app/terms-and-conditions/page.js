@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import Header from "@/components/header";
+import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 const page = () => {
@@ -9,6 +9,8 @@ const page = () => {
   return (
     <main className="min-h-screen flex flex-col bg-[#FAFAFA]">
       <Header />
+
+      <div className="h-24 md:h-28"></div>
       <section className="flex-1 py-12 px-6 sm:px-10 lg:px-20 xl:px-32 overflow-hidden">
       <div className="max-w-5xl mx-auto bg-white shadow-md rounded-2xl p-8 sm:p-12 space-y-6 text-gray-700 leading-relaxed">
         <h2 className="w-full md:w-xs pb-1 mx-auto text-3xl sm:text-4xl font-bold text-[#3D3D3D] mb-3 border-b-4 border-[#009048] text-center">

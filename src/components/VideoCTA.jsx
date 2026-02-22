@@ -7,24 +7,25 @@ const VideoCTA = () => {
         <section className="relative h-[600px] flex items-center justify-center overflow-hidden">
             {/* Background Image */}
             <div className="absolute inset-0">
-                <img
-                    src="https://images.unsplash.com/photo-1543332164-6e82f3555182?auto=format&fit=crop&q=80&w=1600"
-                    alt="Video Background"
-                    className="w-full h-full object-cover"
-                />
+                
+                <video src="/videos/section.mp4" autoPlay muted loop playsInline className="w-full h-full object-cover"/>
                 <div className="absolute inset-0 bg-black/40"></div>
             </div>
 
             {/* Content */}
             <div className="relative z-10 text-center space-y-8 px-4">
-                <button className="w-24 h-24 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center group hover:scale-110 transition-transform duration-500">
+                {/* <button className="w-24 h-24 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center group hover:scale-110 transition-transform duration-500">
                     <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center text-secondary shadow-2xl">
                         <Play fill="currentColor" size={32} className="ml-1" />
                     </div>
-                </button>
+                </button> */}
 
-                <h2 className="text-3xl md:text-5xl font-bold text-white max-w-4xl mx-auto leading-tight italic">
-                    Persatis Unde Amnis Natus Sit Tatem <br /> Eccus Dolorem
+                <h2 className="text-3xl md:text-5xl font-bold text-white max-w-4xl mx-auto leading-tight italic text-center">                    
+                    Transform Your Health With <br /> <span className="flex flex-col md:flex-row items-center justify-center text-[#92BC34] gap-3 md:gap-5 mt-4">
+                         <img src="/images/women-health.webp" className="w-32 md:w-50 h-auto object-contain"/> 
+                         <span className="text-center mr-2">Dietitian</span>
+                         <img src = "https://logos.textgiraffe.com/logos/logo-name/Kavita-designstyle-smoothie-m.png" className="w-40 md:w-80 h-auto object-contain " alt="Kavita Logo"/>
+                    </span>
                 </h2>
             </div>
 

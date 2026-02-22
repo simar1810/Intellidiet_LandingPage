@@ -8,13 +8,15 @@ import VideoCTA from "@/components/VideoCTA";
 import Reviews from "@/components/Reviews";
 import Blogs from "@/components/Blogs";
 import Footer from "@/components/Footer";
+import AboutSection from "@/components/AboutUs";
 
 export default function Home() {
   return (
     <main className="min-h-screen">
       <Header />
       <Hero />
-      <Newsletter />
+      {/* <Newsletter /> */}
+      <AboutSection/>
       <WhyChooseUs />
       <WhyWorkWithUs />
       <NutritionBible />
