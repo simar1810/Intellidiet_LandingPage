@@ -1,10 +1,9 @@
 import Header from "@/components/header";
 import Hero from "@/components/Hero";
 import Newsletter from "@/components/Newsletter";
-import WhyChooseUs from "@/components/WhyChooseUs";
 import WhyWorkWithUs from "@/components/WhyWorkWithUs";
+import Programs from "@/components/Programs";
 import NutritionBible from "@/components/NutritionBible";
-import VideoCTA from "@/components/VideoCTA";
 import Reviews from "@/components/Reviews";
 import Blogs from "@/components/Blogs";
 import Footer from "@/components/Footer";
@@ -17,10 +16,9 @@ export default function Home() {
       <Hero />
       {/* <Newsletter /> */}
       <AboutSection/>
-      <WhyChooseUs />
       <WhyWorkWithUs />
+      <Programs />
       <NutritionBible />
-      <VideoCTA />
       <Reviews />
       <Blogs />
       <Footer />

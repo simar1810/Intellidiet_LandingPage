@@ -61,7 +61,7 @@ const Reviews = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, margin: "-100px" }}
           className="text-center mb-10 sm:mb-16 space-y-4"
         >
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary px-2">
