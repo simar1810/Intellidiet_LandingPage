@@ -15,27 +15,22 @@ const Blogs = () => {
 
   const blogs = [
     {
-      title: "Simple Tips for Effective Weight Loss Every Day",
-      date: "Weight Loss Plan",
-      image:
-        "https://www.allinclusive.care/wp-content/uploads/2022/05/nutritionist-in-his-office-measures-the-volume-of-his-patient-s-waist-Weight-Loss-Miami.jpg",
+      title: "Weight Loss",
+      description: "Transform your lifestyle and reclaim your health with personalized diet plans",
+      image: "https://www.allinclusive.care/wp-content/uploads/2022/05/nutritionist-in-his-office-measures-the-volume-of-his-patient-s-waist-Weight-Loss-Miami.jpg",
+      price: "₹10,500",
     },
     {
-      title: "Morning Routines to Support Healthy Thyroid Function",
-      date: "Thyroid Management Plan",
-      image:
-        "https://www.vista-health.co.uk/media/rfllcvqg/thyroid-ultrasound.jpg?width=1440&height=720&format=webp&v=1dab8efc77af6b0",
+      title: "Diabetes Management",
+      description: "Scientifically backed approach to stabilize blood sugar and improve energy levels",
+      image: "https://tse4.mm.bing.net/th/id/OIP.R95S9mQMPd1pxVCC-K3e8gHaE8?pid=Api&P=0&h=180",
+      price: "₹12,500",
     },
     {
-      title: "Understanding Proper Nutrition for Diabetes Management",
-      date: "Diabetes Management Plan",
-      image:
-        "https://tse4.mm.bing.net/th/id/OIP.R95S9mQMPd1pxVCC-K3e8gHaE8?pid=Api&P=0&h=180",
-    },
-    {
-      title: "Fitness and Diet Tips for PCOS/PCOD Health",
-      date: "PCOS/PCOD Management Plan",
+      title: "PCOS/PCOD Management",
+      description: "Empower your body and balance your hormones with clinical nutrition",
       image: "http://www.krupahospital.com/images/services/Pcod-pcos.jpg",
+      price: "₹12,000",
     },
   ];
 
@@ -60,7 +55,7 @@ const Blogs = () => {
     const lines = [
       "*Service enquiry – InteliDiet*",
       "",
-      "*Service:* " + selectedService.date,
+      "*Service:* " + selectedService.title,
       "*Name:* " + (formData.name || "—"),
       "*Phone:* " + (formData.phone || "—"),
     ];
@@ -80,13 +75,13 @@ const Blogs = () => {
   return (
     <section
       className="py-16 sm:py-20 md:py-24 bg-[#F0FDF4] overflow-hidden"
-      id="services"
+      id="blogs"
     >
       <div className="container mx-auto px-4 md:px-6 max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, margin: "-100px" }}
           className="text-center mb-10 sm:mb-16 space-y-4"
         >
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary px-2">
@@ -98,7 +93,7 @@ const Blogs = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
           {blogs.map((blog, index) => (
             <motion.button
               type="button"
@@ -109,7 +104,7 @@ const Blogs = () => {
               transition={{ duration: 0.45, delay: index * 0.06 }}
               whileHover={{ y: -6, transition: { duration: 0.2 } }}
               onClick={() => openModal(blog)}
-              className="group bg-white rounded-2xl sm:rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300 text-left w-full cursor-pointer border-0 min-w-0"
+              className="group bg-white rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 text-left w-full cursor-pointer border-0 min-w-0"
             >
               <div className="relative h-48 sm:h-52 md:h-60 overflow-hidden">
                 <img
@@ -119,10 +114,11 @@ const Blogs = () => {
                 />
               </div>
               <div className="p-4 sm:p-5 md:p-6 space-y-3 sm:space-y-4">
-                <p className="text-xs text-secondary font-bold">{blog.date}</p>
                 <h3 className="text-lg font-bold text-primary leading-snug group-hover:text-secondary transition-colors duration-300">
                   {blog.title}
                 </h3>
+                <p className="text-gray-500 text-sm">{blog.description}</p>
+                <p className="text-secondary font-bold text-lg">{blog.price}</p>
               </div>
             </motion.button>
           ))}

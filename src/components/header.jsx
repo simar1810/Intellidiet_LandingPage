@@ -3,31 +3,75 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
   const router = useRouter();
+  const pathname = usePathname();
+  const isHomePage = pathname === "/";
+  const isContactPage = pathname === "/contact-us";
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
+      
+      const sections = ["home", "about", "programs", "blogs"];
+      const scrollPosition = window.scrollY + 150;
+
+      for (const sectionId of sections) {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          const offsetTop = element.offsetTop;
+          const offsetHeight = element.offsetHeight;
+          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+            setActiveSection(sectionId);
+            break;
+          }
+        }
+      }
     };
+
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    handleScroll();
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
+
+  const scrollToSection = (sectionId) => {
+    if (window.location.pathname === "/") {
+      document
+        .getElementById(sectionId)
+        ?.scrollIntoView({ behavior: "smooth" });
+    } else {
+      router.push(`/#${sectionId}`);
+    }
+  };
+
+  const scrollToTop = () => {
+    if (window.location.pathname === "/") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      router.push("/");
+    }
+  };
 
   return (
     <nav
-      className={`fixed w-full z-50 top-0 left-0 transition-all duration-300 ease-out ${scrolled ? "bg-black/80 backdrop-blur-md shadow-lg py-2 sm:py-3" : "bg-transparent py-3 sm:py-5"}`}
+      style={{
+        backgroundColor: scrolled
+          ? "rgba(14, 78, 63, 0.8)"
+          : "rgba(14, 78, 63, 0.0)",
+      }}
+      className="fixed w-full z-50 top-0 left-0 transition-all duration-300 backdrop-blur-md shadow-lg py-2 sm:py-3"
     >
       <div className="container-custom flex justify-between items-center">
-        <Link
-          href="/"
-          className="flex items-center gap-1.5 sm:gap-2 group min-w-0"
-        >
-          <div className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-full flex items-center justify-center overflow-hidden flex-shrink-0 transition-transform group-hover:scale-110 duration-500">
+        <Link href="/" onClick={scrollToTop} className="flex items-center">
+          <div className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-full overflow-hidden">
             <Image
               src="/images/logo.png"
               alt="InteliDiet Logo"
@@ -36,79 +80,53 @@ export default function Header() {
               height={80}
             />
           </div>
-          <span className="text-base sm:text-xl md:text-2xl font-bold  truncate">
-            <span
-              className={`${scrolled ? "text-white/90" : "text-primary"} font-[Playfair_Display]`}
-            >
-              Inteli
-            </span>
-            <span
-              style={{ color: "#f59e0b" }}
-              className="font-[Playfair_Display]"
-            >
-              Diet
-            </span>
-          </span>
         </Link>
 
-        {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-10">
-          <Link
-            href="/"
-            className={` ${scrolled ? "text-white/90" : "text-black/90"}  hover:text-[#84bd00] transition-colors text-sm uppercase tracking-widest font-medium relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-[#84bd00] after:transition-all hover:after:w-full`}
+          <button
+            onClick={scrollToTop}
+            className={`text-sm uppercase tracking-widest font-medium ${isHomePage && activeSection === "home" ? "text-white" : "text-white/40 hover:text-white/70"}`}
           >
             Home
-          </Link>
-          <Link
-            href="/#about"
-            onClick={(e) => {
-              if (window.location.pathname === "/") {
-                e.preventDefault();
-                document
-                  .getElementById("about")
-                  ?.scrollIntoView({ behavior: "smooth" });
-              }
-            }}
-            className={`${scrolled ? "text-white/90" : "text-black/90"} hover:text-[#84bd00] transition-colors text-sm uppercase tracking-widest font-medium relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-[#84bd00] after:transition-all hover:after:w-full`}
+          </button>
+          <button
+            onClick={() => scrollToSection("about")}
+            className={`text-sm uppercase tracking-widest font-medium ${activeSection === "about" ? "text-white" : "text-white/50 hover:text-white"}`}
           >
             About Us
-          </Link>
-          <Link
-            href="/#services"
-            onClick={(e) => {
-              if (window.location.pathname === "/") {
-                e.preventDefault();
-                const section = document.getElementById("services");
-                section?.scrollIntoView({ behavior: "smooth" });
-              }
-            }}
-            className={`${scrolled ? "text-white/90" : "text-black/90"} hover:text-[#84bd00] transition-colors text-sm uppercase tracking-widest font-medium relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-[#84bd00] after:transition-all hover:after:w-full`}
+          </button>
+          <button
+            onClick={() => scrollToSection("programs")}
+            className={`text-sm uppercase tracking-widest font-medium ${activeSection === "programs" ? "text-white" : "text-white/50 hover:text-white"}`}
           >
-            Services
-          </Link>
-          {/* <Link href="/" className={`${scrolled ? 'text-white/90' : 'text-black/90'} hover:text-[#84bd00] transition-colors text-sm uppercase tracking-widest font-medium relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-[#84bd00] after:transition-all hover:after:w-full`}>
-            Portfolio
-          </Link> */}
+            Programs
+          </button>
+          <button
+            onClick={() => scrollToSection("blogs")}
+            className={`text-sm uppercase tracking-widest font-medium ${activeSection === "blogs" ? "text-white" : "text-white/50 hover:text-white"}`}
+          >
+            Latest Services
+          </button>
           <button
             onClick={() => router.push("/contact-us")}
-            className={`px-7 py-2.5 border ${scrolled ? "border-white text-white" : "border-black text-black"}  rounded-full hover:bg-[#84bd00] hover:border-[#84bd00] hover:text-black transition-all font-semibold uppercase text-xs tracking-wider cursor-pointer`}
+            className={`px-6 py-2.5 rounded-lg font-bold text-sm transition-all duration-300 shadow-xl hover:-translate-y-1 min-h-[40px] ${
+              isContactPage
+                ? "bg-white text-primary border-2 border-secondary"
+                : "bg-secondary hover:bg-orange-600 text-white hover:shadow-orange-200"
+            }`}
           >
             Join Now
           </button>
         </div>
 
-        {/* Mobile Toggle */}
         <button
           type="button"
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-          className="md:hidden p-2 -m-2 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-lg hover:bg-white/10 transition-colors touch-manipulation"
-          style={{
-            color: scrolled ? "rgba(255,255,255,0.9)" : "rgba(0,0,0,0.9)",
-          }}
+          className="md:hidden p-2 min-w-[44px] min-h-[44px] flex items-center justify-center text-white"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           <svg
-            className="w-7 h-7 sm:w-8 sm:h-8"
+            className="w-7 h-7"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -125,68 +143,88 @@ export default function Header() {
         </button>
       </div>
 
-      {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="absolute top-full left-0 w-full bg-[#1a1a1a] px-4 py-5 flex flex-col gap-1 md:hidden shadow-2xl border-t border-white/10 max-h-[85vh] overflow-y-auto">
-          <Link
-            href="/"
-            className="text-white text-lg font-medium hover:text-[#84bd00] py-3 px-4 rounded-lg hover:bg-white/5 text-center min-h-[44px] flex items-center justify-center"
+        <>
+          <div 
+            className="fixed inset-0 bg-black/70 z-40 md:hidden"
             onClick={() => setIsMenuOpen(false)}
+          />
+          <div 
+            style={{
+              backgroundColor: "#0e4e3f",
+            }}
+            className="absolute top-full left-0 w-full px-4 py-5 flex flex-col gap-2 md:hidden shadow-2xl border-t border-white/10 backdrop-blur-2xl z-50"
+          >
+          <button
+            onClick={() => {
+              setIsMenuOpen(false);
+              if (window.location.pathname === "/") {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              } else {
+                router.push("/");
+              }
+            }}
+            className={`text-lg font-medium py-3 ${isHomePage && activeSection === "home" ? "text-white" : "text-white/40"}`}
           >
             Home
-          </Link>
-          <Link
-            href="/#about"
-            className="text-white text-lg font-medium hover:text-[#84bd00] py-3 px-4 rounded-lg hover:bg-white/5 text-center min-h-[44px] flex items-center justify-center"
-            onClick={(e) => {
+          </button>
+          <button
+            onClick={() => {
+              setIsMenuOpen(false);
               if (window.location.pathname === "/") {
-                e.preventDefault();
                 document
                   .getElementById("about")
                   ?.scrollIntoView({ behavior: "smooth" });
+              } else {
+                router.push("/#about");
               }
-              setIsMenuOpen(false);
             }}
+            className={`text-lg font-medium py-3 ${activeSection === "about" ? "text-white" : "text-white/60"}`}
           >
             About Us
-          </Link>
-          <Link
-            href="/privacy-policy"
-            className="text-white text-lg font-medium hover:text-[#84bd00] py-3 px-4 rounded-lg hover:bg-white/5 text-center min-h-[44px] flex items-center justify-center"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            Privacy Policy
-          </Link>
-          <Link
-            href="/terms-and-conditions"
-            className="text-white text-lg font-medium hover:text-[#84bd00] py-3 px-4 rounded-lg hover:bg-white/5 text-center min-h-[44px] flex items-center justify-center"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            Terms & Conditions
-          </Link>
-          <Link
-            href="/#services"
-            className="text-white text-lg font-medium hover:text-[#84bd00] py-3 px-4 rounded-lg hover:bg-white/5 text-center min-h-[44px] flex items-center justify-center"
-            onClick={(e) => {
-              if (window.location.pathname === "/") {
-                e.preventDefault();
-                document
-                  .getElementById("services")
-                  ?.scrollIntoView({ behavior: "smooth" });
-              }
-              setIsMenuOpen(false);
-            }}
-          >
-            Services
-          </Link>
+          </button>
           <button
-            type="button"
+            onClick={() => {
+              setIsMenuOpen(false);
+              if (window.location.pathname === "/") {
+                document
+                  .getElementById("programs")
+                  ?.scrollIntoView({ behavior: "smooth" });
+              } else {
+                router.push("/#programs");
+              }
+            }}
+            className={`text-lg font-medium py-3 ${activeSection === "programs" ? "text-white" : "text-white/60"}`}
+          >
+            Programs
+          </button>
+          <button
+            onClick={() => {
+              setIsMenuOpen(false);
+              if (window.location.pathname === "/") {
+                document
+                  .getElementById("blogs")
+                  ?.scrollIntoView({ behavior: "smooth" });
+              } else {
+                router.push("/#blogs");
+              }
+            }}
+            className={`text-lg font-medium py-3 ${activeSection === "blogs" ? "text-white" : "text-white/60"}`}
+          >
+            Latest Services
+          </button>
+          <button
             onClick={() => router.push("/contact-us")}
-            className="w-full py-4 mt-2 bg-[#84bd00] text-white rounded-full font-bold uppercase tracking-wider min-h-[48px] touch-manipulation"
+            className={`px-6 py-3 rounded-lg font-bold text-base mt-2 ${
+              isContactPage
+                ? "bg-white text-primary border-2 border-secondary"
+                : "bg-secondary hover:bg-orange-600 text-white"
+            }`}
           >
             Join Now
           </button>
-        </div>
+          </div>
+        </>
       )}
     </nav>
   );

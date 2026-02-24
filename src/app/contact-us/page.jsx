@@ -67,9 +67,8 @@ const ContactUs = () => {
   return (
     <div className="flex flex-col min-h-screen bg-[#F8FAF7]">
       <Header />
-      <div className="h-24 md:h-28" aria-hidden />
-
-      <section className="bg-primary py-10 sm:py-14 md:py-20 px-4 sm:px-6 md:px-8 relative overflow-hidden">
+      
+      <section className="bg-primary pt-32 sm:pt-36 md:pt-40 pb-10 sm:pb-14 md:pb-20 px-4 sm:px-6 md:px-8 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10 pointer-events-none">
           <div className="absolute top-0 right-0 w-64 sm:w-96 h-64 sm:h-96 bg-secondary rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
         </div>
@@ -303,7 +302,6 @@ const ContactUs = () => {
                       <option value="Muscle gain">Muscle gain</option>
                       <option value="Improve stamina">Improve stamina</option>
                       <option value="Manage diabetes">Manage diabetes</option>
-                      <option value="Manage thyroid">Manage thyroid</option>
                       <option value="Improve gut health">Improve gut health</option>
                       <option value="PCOS management">PCOS management</option>
                       <option value="Blood pressure control">Blood pressure control</option>
