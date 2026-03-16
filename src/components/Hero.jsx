@@ -47,7 +47,7 @@ const Hero = () => {
               <span className="text-secondary">Diet</span>
             </motion.h1>
 
-            <motion.p
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
@@ -66,11 +66,14 @@ const Hero = () => {
                 <span className="text-gray-300">
                   Founder of Intelidiet{" "}
                   <span className="ml-1 text-gray-400 italic">
-                    (Earlier Nutricure Diet)
+                    (Earlier Nutricure diet)
                   </span>
                 </span>
               </div>
-            </motion.p>
+
+
+
+            </motion.div>
 
             <motion.div
               initial={{ opacity: 0, y: 16 }}
@@ -92,6 +95,13 @@ const Hero = () => {
                 Download App
               </button>
             </motion.div>
+
+            <div className="mt-6 flex flex-col items-center lg:items-start gap-1">
+              <span className="ml-1 text-gray-400 italic">
+                (Plans starting at{" "}
+                <span className="text-secondary font-bold">₹1000</span>.)
+              </span>
+            </div>
           </div>
 
           {/* Image Content */}
@@ -115,8 +125,20 @@ const Hero = () => {
                       />
                     </div>
                   </div>
+                  {/* Slide 2: Tea Advertisement */}
+                  <div className="embla__slide flex-[0_0_100%] min-w-0 flex justify-center items-end">
+                    <div className="relative w-full mb-20 h-[350px] sm:h-[450px] md:h-[550px] lg:h-[600px]">
+                      <Image
+                        src="/images/tea_advertisement.jpeg"
+                        alt="Tea Advertisement"
+                        fill
+                        className="object-contain object-bottom"
+                        priority
+                      />
+                    </div>
+                  </div>
 
-                  {/* Slide 2: Dt. Kavita - Flush to bottom */}
+                  {/* Slide 3: Dt. Kavita - Flush to bottom */}
                   <div className="embla__slide flex-[0_0_100%] min-w-0 flex justify-center items-end">
                     <div className="relative w-full h-[350px] sm:h-[450px] md:h-[550px] lg:h-[650px]">
                       <Image
