@@ -5,7 +5,7 @@ import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 
 const AboutSection = () => {
   const { scrollY } = useScroll();
-  
+
   // Background leaves - increased range for stronger effect
   const y1 = useTransform(scrollY, [0, 400, 800], [0, -100, 0]);
   const y2 = useTransform(scrollY, [0, 400, 800], [0, 80, 0]);
@@ -71,19 +71,19 @@ const AboutSection = () => {
       id="about"
     >
       {/* Background decorative elements */}
-      <motion.div 
+      <motion.div
         style={{ y: smoothY1, rotate: smoothRotate1, x: smoothX1 }}
         className="absolute top-20 left-0 w-32 h-32 opacity-20 pointer-events-none"
       >
         <Image src="/images/leaf2.png" alt="" fill className="object-contain" />
       </motion.div>
-      <motion.div 
+      <motion.div
         style={{ y: smoothY2, rotate: smoothRotate2, x: smoothX2 }}
         className="absolute bottom-20 right-0 w-40 h-40 opacity-15 pointer-events-none"
       >
         <Image src="/images/leaf1.png" alt="" fill className="object-contain" />
       </motion.div>
-      <motion.div 
+      <motion.div
         style={{ y: smoothY3 }}
         className="absolute top-1/3 right-1/4 w-24 h-24 opacity-10 pointer-events-none"
       >
@@ -118,7 +118,7 @@ const AboutSection = () => {
             className="lg:w-7/12 w-full flex flex-col relative"
           >
             {/* Leaves on text side */}
-            <motion.div 
+            <motion.div
               style={{ y: smoothY4, rotate: smoothRotate3, x: smoothX3 }}
               className="absolute -right-4 top-0 w-16 h-16 opacity-40 pointer-events-none"
             >
@@ -129,7 +129,7 @@ const AboutSection = () => {
                 className="object-contain"
               />
             </motion.div>
-            <motion.div 
+            <motion.div
               style={{ y: smoothY5, rotate: smoothRotate4 }}
               className="absolute left-0 top-1/3 w-12 h-12 opacity-30 pointer-events-none"
             >
@@ -140,7 +140,7 @@ const AboutSection = () => {
                 className="object-contain"
               />
             </motion.div>
-            <motion.div 
+            <motion.div
               style={{ y: smoothY6, rotate: smoothRotate5, x: smoothX4 }}
               className="absolute -left-6 bottom-1/4 w-20 h-20 opacity-35 pointer-events-none"
             >
@@ -228,7 +228,7 @@ const AboutSection = () => {
             className="lg:w-5/12 w-full flex flex-col relative"
           >
             {/* Decorative leaves */}
-            <motion.div 
+            <motion.div
               style={{ y: smoothY7, rotate: smoothRotate6, x: smoothX5 }}
               className="absolute -top-4 -left-4 w-24 h-24 opacity-60 pointer-events-none z-0"
             >
@@ -239,7 +239,7 @@ const AboutSection = () => {
                 className="object-contain"
               />
             </motion.div>
-            <motion.div 
+            <motion.div
               style={{ y: smoothY8, rotate: smoothRotate7 }}
               className="absolute top-10 -right-8 w-20 h-20 opacity-50 pointer-events-none z-0"
             >
@@ -250,7 +250,7 @@ const AboutSection = () => {
                 className="object-contain"
               />
             </motion.div>
-            <motion.div 
+            <motion.div
               style={{ y: smoothY9, rotate: smoothRotate8, x: smoothX6 }}
               className="absolute -bottom-2 -left-6 w-28 h-28 opacity-60 pointer-events-none z-0"
             >
@@ -261,7 +261,7 @@ const AboutSection = () => {
                 className="object-contain"
               />
             </motion.div>
-            <motion.div 
+            <motion.div
               style={{ y: smoothY10, rotate: smoothRotate9 }}
               className="absolute bottom-16 -right-4 w-16 h-16 opacity-40 pointer-events-none z-0"
             >
@@ -284,7 +284,11 @@ const AboutSection = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/30 via-transparent to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-primary/80 to-transparent p-4">
                   <p className="text-white font-bold text-lg">Dt. Kavita</p>
-                  <p className="text-white/80 text-sm">Founder & Nutrition Expert</p>
+                  <p className="text-white/80 text-sm">
+                    Founder of <b className="text-accent">Intelidiet</b> and{" "}
+                    <b className="text-accent">Nutricure diet</b> & Nutrition
+                    Expert
+                  </p>
                 </div>
               </div>
             </div>
