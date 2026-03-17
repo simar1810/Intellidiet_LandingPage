@@ -1,7 +1,7 @@
 "use client";
 
-import Header from "@/components/header";
-import Footer from "@/components/Footer";
+import Header from "../../components/header";
+import Footer from "../../components/Footer";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Mail, Phone, Clock } from "lucide-react";
@@ -67,7 +67,7 @@ const ContactUs = () => {
   return (
     <div className="flex flex-col min-h-screen bg-[#F8FAF7]">
       <Header />
-      
+
       <section className="bg-primary pt-32 sm:pt-36 md:pt-40 pb-10 sm:pb-14 md:pb-20 px-4 sm:px-6 md:px-8 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10 pointer-events-none">
           <div className="absolute top-0 right-0 w-64 sm:w-96 h-64 sm:h-96 bg-secondary rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />

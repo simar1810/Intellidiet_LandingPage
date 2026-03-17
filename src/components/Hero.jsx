@@ -2,26 +2,25 @@
 import React from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { motion, useScroll, useTransform, useSpring } from "framer-motion";
+import { motion } from "framer-motion";
 import { Smartphone } from "lucide-react";
+import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay";
 
 const Hero = () => {
   const router = useRouter();
-  const { scrollY } = useScroll();
-  const y = useTransform(scrollY, [0, 100], [0, 80]);
-  const scale = useTransform(scrollY, [0, 100], [1, 1.08]);
-  const smoothY = useSpring(y, { stiffness: 50, damping: 15, mass: 0.5 });
-  const smoothScale = useSpring(scale, { stiffness: 50, damping: 15, mass: 0.5 });
+  const [emblaRef] = useEmblaCarousel({ loop: true, duration: 60 }, [
+    Autoplay({ delay: 5000, stopOnInteraction: false }),
+  ]);
 
   return (
     <section
-      className="relative pt-24 sm:pt-28 md:pt-32 px-4 sm:px-6 md:px-10 overflow-hidden bg-[#F8FAF7]"
+      className="min-h-screen relative pt-24 sm:pt-28 md:pt-32 px-4 sm:px-6 md:px-10 overflow-hidden bg-[#1a1a2e]"
       id="home"
       style={{
         backgroundImage: "url('/bg-frame.png')",
         backgroundSize: "cover",
         backgroundPosition: "center",
-        opacity: 1,
       }}
     >
       <div className="container mx-auto px-4 md:px-6 max-w-7xl">
@@ -48,16 +47,33 @@ const Hero = () => {
               <span className="text-secondary">Diet</span>
             </motion.h1>
 
-            <motion.p
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-gray-400 text-base sm:text-lg md:text-xl max-w-xl mx-auto lg:mx-0 leading-relaxed"
-            >
+              className="text-gray-400 text-base sm:text-lg md:text-xl max-w-xl mx-auto lg:mx-0 leading-relaxed">
               Transform your health with customised nutrition, intelligent
               tools, and trusted expert advice tailored to your unique
               lifestyle.
-            </motion.p>
+              <div className="flex flex-col mt-4">
+                <span className="text-gray-300">
+                  An initiative by
+                  <span className="ml-1 text-secondary font-semibold">
+                    Dt. Kavita
+                  </span>
+                </span>
+
+                <span className="text-gray-300">
+                  Founder of Intelidiet{" "}
+                  <span className="ml-1 text-gray-400 italic">
+                    (Earlier Nutricure diet)
+                  </span>
+                </span>
+              </div>
+
+
+
+            </motion.div>
 
             <motion.div
               initial={{ opacity: 0, y: 16 }}
@@ -71,41 +87,73 @@ const Hero = () => {
               >
                 Join Now
               </button>
-              <button
+              {/* <button
                 onClick={() => router.push("/app")}
                 className="bg-white cursor-pointer hover:bg-gray-50 text-primary px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl font-bold text-base sm:text-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1 hover:scale-[1.02] active:scale-[0.98] w-full sm:w-auto min-h-[48px] touch-manipulation flex items-center justify-center gap-2"
               >
                 <Smartphone className="w-5 h-5" />
                 Download App
-              </button>
+              </button> */}
             </motion.div>
+
+            <div className="mt-6 flex flex-col items-center lg:items-start gap-1">
+              <span className="ml-1 text-gray-400 italic">
+                (Plans starting at{" "}
+                <span className="text-secondary font-bold">₹1000</span>.)
+              </span>
+            </div>
           </div>
 
           {/* Image Content */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.96 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.7, delay: 0.2 }}
-            style={{ y: smoothY }}
-            className="lg:w-1/2 relative order-2 lg:order-2"
-          >
-            <div className="relative z-10 w-full max-w-[800px] mx-auto min-w-0">
-              <div className="relative rounded-2xl overflow-hidden">
-                <motion.div
-                  style={{ scale: smoothScale }}
-                  className="absolute inset-0 -z-10 blur-xl rounded-2xl"
-                />
-                <Image
-                  src="/images/kavita-mam.png"
-                  alt="Healthy Eating - InteliDiet"
-                  className="w-full h-auto object-cover"
-                  width={800}
-                  height={800}
-                  priority
-                />
+          <div className="w-full lg:w-1/2 relative order-2 lg:order-2 self-end">
+            {/* Added self-end to push the whole block to the bottom of the flex container */}
+
+            <div className="relative z-10 w-full max-w-[650px] mx-auto">
+              <div className="embla overflow-hidden" ref={emblaRef}>
+                <div className="embla__container flex items-end">
+                  {/* items-end ensures all slides align to the bottom */}
+
+                  {/* Slide 1: App Mockup */}
+                  <div className="embla__slide flex-[0_0_100%] min-w-0 flex justify-center items-end">
+                    <div className="relative w-full mb-20 h-[350px] sm:h-[450px] md:h-[550px] lg:h-[600px]">
+                      <Image
+                        src="/HWD_Mockup.png"
+                        alt="Diet App Mockup"
+                        fill
+                        className="object-contain object-bottom"
+                        priority
+                      />
+                    </div>
+                  </div>
+                  {/* Slide 2: Tea Advertisement */}
+                  <div className="embla__slide flex-[0_0_100%] min-w-0 flex justify-center items-end">
+                    <div className="relative w-full mb-20 h-[350px] sm:h-[450px] md:h-[550px] lg:h-[600px]">
+                      <Image
+                        src="/images/tea_advertisement.jpeg"
+                        alt="Tea Advertisement"
+                        fill
+                        className="object-contain object-bottom"
+                        priority
+                      />
+                    </div>
+                  </div>
+
+                  {/* Slide 3: Dt. Kavita - Flush to bottom */}
+                  <div className="embla__slide flex-[0_0_100%] min-w-0 flex justify-center items-end">
+                    <div className="relative w-full h-[350px] sm:h-[450px] md:h-[550px] lg:h-[650px]">
+                      <Image
+                        src="/images/kavita-mam.png"
+                        alt="Dt. Kavita"
+                        fill
+                        className="object-contain object-bottom"
+                        priority
+                      />
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

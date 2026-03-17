@@ -1,13 +1,17 @@
-import Header from "@/components/header";
-import Hero from "@/components/Hero";
-import Newsletter from "@/components/Newsletter";
-import WhyWorkWithUs from "@/components/WhyWorkWithUs";
-import Programs from "@/components/Programs";
-import NutritionBible from "@/components/NutritionBible";
-import Reviews from "@/components/Reviews";
-import Blogs from "@/components/Blogs";
-import Footer from "@/components/Footer";
-import AboutSection from "@/components/AboutUs";
+'use client'
+import Header from "../components/header";
+import Hero from "../components/Hero";
+import Newsletter from "../components/Newsletter";
+import WhyWorkWithUs from "../components/WhyWorkWithUs";
+import Programs from "../components/Programs";
+import NutritionBible from "../components/NutritionBible";
+import Reviews from "../components/Reviews";
+import Blogs from "../components/Blogs";
+import Footer from "../components/Footer";
+import AboutSection from "../components/AboutUs";
+import AppFeatures from "../components/AppFeatures";
+import WhatToExpect from "../components/WhatToExpect";
+import TeaAdvertisement from "../components/TeaAdvertisement";
 
 export default function Home() {
   return (
@@ -15,10 +19,13 @@ export default function Home() {
       <Header />
       <Hero />
       {/* <Newsletter /> */}
-      <AboutSection/>
+      {/* <AppFeatures /> */}
+      <AboutSection />
       <WhyWorkWithUs />
       <Programs />
+      <WhatToExpect />
       <NutritionBible />
+      <TeaAdvertisement />
       <Reviews />
       <Blogs />
       <Footer />
