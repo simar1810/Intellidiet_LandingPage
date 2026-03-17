@@ -87,13 +87,13 @@ const Hero = () => {
               >
                 Join Now
               </button>
-              <button
+              {/* <button
                 onClick={() => router.push("/app")}
                 className="bg-white cursor-pointer hover:bg-gray-50 text-primary px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl font-bold text-base sm:text-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1 hover:scale-[1.02] active:scale-[0.98] w-full sm:w-auto min-h-[48px] touch-manipulation flex items-center justify-center gap-2"
               >
                 <Smartphone className="w-5 h-5" />
                 Download App
-              </button>
+              </button> */}
             </motion.div>
 
             <div className="mt-6 flex flex-col items-center lg:items-start gap-1">

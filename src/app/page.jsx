@@ -19,7 +19,7 @@ export default function Home() {
       <Header />
       <Hero />
       {/* <Newsletter /> */}
-      <AppFeatures />
+      {/* <AppFeatures /> */}
       <AboutSection />
       <WhyWorkWithUs />
       <Programs />
