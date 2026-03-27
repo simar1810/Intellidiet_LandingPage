@@ -26,11 +26,11 @@ const programs = [
     title: "PCOS Management",
     subtitle: "Empower your body and balance your hormones",
     duration: "3 Months",
-    price: "₹12,000",
+    price: "₹12,500",
     monthlyPrice: "₹4,500",
     icon: "🌸",
     color: "from-pink-50 to-rose-50",
-    hasMonthly: true,
+    hasMonthly: false,
     description: "Empower your body and balance your hormones with the Inteli Diet 3-Month Personalized PCOS Management Plan. Designed by Dt. Kavita, this four-phase clinical nutrition program targets the root causes of PCOS to help you reclaim your rhythm and confidence.",
     phases: [
       { title: "Phase 1: The Insulin Reset (First 15 Days)", desc: "Stabilize & Shield: Combat insulin resistance with a high-fiber, low-glycemic (Low Gi) protocol. Smart Fuel: A high-protein, low-carb approach designed to balance blood sugar from day one." },
@@ -80,10 +80,10 @@ const programs = [
   },
   {
     id: "transformation",
-    title: "25-Day Transformation",
+    title: "30-Day Transformation",
     subtitle: "Reset your metabolism and reclaim your confidence",
-    duration: "25 Days",
-    price: "₹4,000",
+    duration: "30 Days",
+    price: "₹3,500",
     icon: "🔥",
     color: "from-red-50 to-orange-50",
     description: "The Inteli Diet 30-Day Transformation. Reset your metabolism and reclaim your confidence in less than a month.",
@@ -226,7 +226,7 @@ const ProgramModal = ({ program, isOpen, onClose }) => {
                     onClose();
                     window.location.href = "/contact-us";
                   }}
-                  className="bg-secondary hover:bg-orange-600 text-white px-8 py-3 rounded-xl font-bold transition-all hover:shadow-lg"
+                  className="bg-secondary hover:bg-orange-700 text-white px-8 py-3 rounded-xl font-bold transition-all hover:shadow-lg"
                 >
                   Enroll Now
                 </button>
@@ -293,7 +293,7 @@ const Programs = () => {
                       <p className="text-xs text-gray-400 mb-0.5">
                         {program.hasMonthly ? "Starting from" : "Price"}
                       </p>
-                      <p className="text-xl sm:text-2xl font-bold text-secondary">{program.monthlyPrice || program.price}</p>
+                      <p className="text-xl sm:text-2xl font-bold text-secondary">{program.hasMonthly ? program.monthlyPrice : program.price}</p>
                     </div>
                     <div className="w-10 h-10 rounded-full bg-secondary text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                       →

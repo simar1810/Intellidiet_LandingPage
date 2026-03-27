@@ -49,18 +49,11 @@ const itemVariants = {
 
 const WhatToExpect = () => {
     return (
-        <section className="relative py-10 sm:py-14 md:py-16 overflow-hidden bg-primary">
-            {/* Subtle radial glow */}
-            <div className="absolute inset-0 pointer-events-none">
-                <div
-                    className="w-full h-full"
-                    style={{
-                        backgroundImage:
-                            "radial-gradient(circle at 50% 50%, rgba(139,195,74,0.12) 0%, transparent 60%), radial-gradient(circle at 80% 20%, rgba(245,143,41,0.08) 0%, transparent 50%)",
-                    }}
-                />
-            </div>
-
+        <section className="relative py-10 sm:py-14 md:py-16 overflow-hidden"
+            style={{
+                background: "linear-gradient(135deg, #66CDAA 0%, #8FBC8F 50%, #98FB98 100%)",
+            }}
+        >
             <div className="container mx-auto px-4 md:px-6 max-w-5xl relative z-10">
                 {/* Section Heading */}
                 <motion.div

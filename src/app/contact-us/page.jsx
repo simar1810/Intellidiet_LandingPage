@@ -68,10 +68,11 @@ const ContactUs = () => {
     <div className="flex flex-col min-h-screen bg-[#F8FAF7]">
       <Header />
 
-      <section className="bg-primary pt-32 sm:pt-36 md:pt-40 pb-10 sm:pb-14 md:pb-20 px-4 sm:px-6 md:px-8 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10 pointer-events-none">
-          <div className="absolute top-0 right-0 w-64 sm:w-96 h-64 sm:h-96 bg-secondary rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
-        </div>
+      <section className="pt-32 sm:pt-36 md:pt-40 pb-10 sm:pb-14 md:pb-20 px-4 sm:px-6 md:px-8 relative overflow-hidden"
+        style={{
+          background: "linear-gradient(135deg, #66CDAA 0%, #8FBC8F 50%, #98FB98 100%)",
+        }}
+      >
         <div className="container mx-auto max-w-6xl relative z-10 text-center px-2">
           <motion.h1
             initial={{ opacity: 0, y: 16 }}

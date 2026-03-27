@@ -219,7 +219,7 @@ const AppFeatures = () => {
                                 <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-3">
                                     <button
                                         onClick={() => router.push("/app")}
-                                        className="bg-secondary cursor-pointer hover:bg-orange-600 text-white px-8 py-3.5 rounded-xl font-bold text-sm sm:text-base transition-all duration-300 shadow-lg hover:shadow-orange-500/30 hover:-translate-y-0.5 active:scale-[0.98] flex items-center gap-2 w-full sm:w-auto justify-center min-h-[48px] touch-manipulation"
+                                        className="bg-secondary cursor-pointer hover:bg-orange-700 text-white px-8 py-3.5 rounded-xl font-bold text-sm sm:text-base transition-all duration-300 shadow-lg hover:shadow-orange-500/30 hover:-translate-y-0.5 active:scale-[0.98] flex items-center gap-2 w-full sm:w-auto justify-center min-h-[48px] touch-manipulation"
                                     >
                                         <Download className="w-5 h-5" />
                                         Download Now

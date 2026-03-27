@@ -63,9 +63,9 @@ export default function Header() {
   return (
     <nav
       style={{
-        backgroundColor: scrolled
+        background: scrolled
           ? "rgba(14, 78, 63, 0.8)"
-          : "rgba(14, 78, 63, 0.0)",
+          : "linear-gradient(135deg, #66CDAA 0%, #8FBC8F 50%, #98FB98 100%)",
       }}
       className="fixed w-full z-50 top-0 left-0 transition-all duration-300 backdrop-blur-md shadow-lg py-2 sm:py-3"
     >
@@ -112,7 +112,7 @@ export default function Header() {
             className={`px-6 py-2.5 rounded-lg font-bold text-sm transition-all duration-300 shadow-xl hover:-translate-y-1 min-h-[40px] ${
               isContactPage
                 ? "bg-white text-primary border-2 border-secondary"
-                : "bg-secondary hover:bg-orange-600 text-white hover:shadow-orange-200"
+                : "bg-secondary hover:bg-orange-700 text-white hover:shadow-orange-200"
             }`}
           >
             Join Now
@@ -151,9 +151,9 @@ export default function Header() {
           />
           <div 
             style={{
-              backgroundColor: "#0e4e3f",
+              background: "linear-gradient(135deg, #66CDAA 0%, #8FBC8F 50%, #98FB98 100%)",
             }}
-            className="absolute top-full left-0 w-full px-4 py-5 flex flex-col gap-2 md:hidden shadow-2xl border-t border-white/10 backdrop-blur-2xl z-50"
+            className="absolute top-full left-0 w-full px-4 py-5 flex flex-col gap-2 md:hidden shadow-2xl border-t border-white/20 backdrop-blur-2xl z-50"
           >
           <button
             onClick={() => {
@@ -218,7 +218,7 @@ export default function Header() {
             className={`px-6 py-3 rounded-lg font-bold text-base mt-2 ${
               isContactPage
                 ? "bg-white text-primary border-2 border-secondary"
-                : "bg-secondary hover:bg-orange-600 text-white"
+                : "bg-secondary hover:bg-orange-700 text-white"
             }`}
           >
             Join Now

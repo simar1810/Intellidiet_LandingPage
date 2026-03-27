@@ -19,9 +19,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${outfit.variable} ${inter.variable} font-sans antialiased`}
+        suppressHydrationWarning
       >
         {children}
         <WhatsAppFloat />

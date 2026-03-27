@@ -3,24 +3,46 @@ import React from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
-import { Smartphone } from "lucide-react";
+import { Smartphone, ChevronLeft, ChevronRight } from "lucide-react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 
 const Hero = () => {
   const router = useRouter();
-  const [emblaRef] = useEmblaCarousel({ loop: true, duration: 60 }, [
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, duration: 60 }, [
     Autoplay({ delay: 5000, stopOnInteraction: false }),
   ]);
+  const [selectedIndex, setSelectedIndex] = React.useState(0);
+  const [scrollSnaps, setScrollSnaps] = React.useState([]);
+
+  const onSelect = React.useCallback(() => {
+    if (!emblaApi) return;
+    setSelectedIndex(emblaApi.selectedIndex);
+    setScrollSnaps(emblaApi.scrollSnapList());
+  }, [emblaApi]);
+
+  React.useEffect(() => {
+    if (!emblaApi) return;
+
+    onSelect();
+    emblaApi.on("reInit", onSelect);
+    emblaApi.on("select", onSelect);
+
+    return () => {
+      emblaApi.off("reInit", onSelect);
+      emblaApi.off("select", onSelect);
+    };
+  }, [emblaApi, onSelect]);
+
+  const scrollPrev = () => emblaApi?.scrollPrev();
+  const scrollNext = () => emblaApi?.scrollNext();
 
   return (
     <section
       className="min-h-screen relative pt-24 sm:pt-28 md:pt-32 px-4 sm:px-6 md:px-10 overflow-hidden bg-[#1a1a2e]"
       id="home"
       style={{
-        backgroundImage: "url('/bg-frame.png')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
+        background: "linear-gradient(135deg, #66CDAA 0%, #8FBC8F 50%, #98FB98 100%)",
       }}
     >
       <div className="container mx-auto px-4 md:px-6 max-w-7xl">
@@ -42,30 +64,29 @@ const Hero = () => {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight text-white"
             >
-              Achieve Your Dream <br className="hidden sm:block" />
-              <span className="sm:inline">Body with Our </span>
-              <span className="text-secondary">Diet</span>
+              Where Nutrition Meets{" "}
+              <span className="text-secondary">Intelligence</span>
             </motion.h1>
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-gray-400 text-base sm:text-lg md:text-xl max-w-xl mx-auto lg:mx-0 leading-relaxed">
+              className="text-white text-base sm:text-lg md:text-xl max-w-xl mx-auto lg:mx-0 leading-relaxed">
               Transform your health with customised nutrition, intelligent
               tools, and trusted expert advice tailored to your unique
               lifestyle.
               <div className="flex flex-col mt-4">
-                <span className="text-gray-300">
+                <span className="text-white">
                   An initiative by
-                  <span className="ml-1 text-secondary font-semibold">
+                  <span className="ml-1 text-secondary font-bold">
                     Dt. Kavita
                   </span>
                 </span>
 
-                <span className="text-gray-300">
+                <span className="text-white">
                   Founder of Intelidiet{" "}
-                  <span className="ml-1 text-gray-400 italic">
+                  <span className="ml-1 text-white/90 italic">
                     (Earlier Nutricure diet)
                   </span>
                 </span>
@@ -83,22 +104,22 @@ const Hero = () => {
             >
               <button
                 onClick={() => router.push("/contact-us")}
-                className="bg-secondary cursor-pointer hover:bg-orange-600 text-white px-8 sm:px-10 py-3.5 sm:py-4 rounded-xl font-bold text-base sm:text-lg transition-all duration-300 shadow-xl hover:shadow-orange-200 hover:-translate-y-1 hover:scale-[1.02] active:scale-[0.98] w-full sm:w-auto min-h-[48px] touch-manipulation"
+                className="bg-secondary cursor-pointer hover:bg-orange-700 text-white px-8 sm:px-10 py-3.5 sm:py-4 rounded-xl font-bold text-base sm:text-lg transition-all duration-300 shadow-xl hover:shadow-orange-200 hover:-translate-y-1 hover:scale-[1.02] active:scale-[0.98] w-full sm:w-auto min-h-[48px] touch-manipulation"
               >
                 Join Now
               </button>
-              {/* <button
-                onClick={() => router.push("/app")}
-                className="bg-white cursor-pointer hover:bg-gray-50 text-primary px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl font-bold text-base sm:text-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1 hover:scale-[1.02] active:scale-[0.98] w-full sm:w-auto min-h-[48px] touch-manipulation flex items-center justify-center gap-2"
+              <button
+                onClick={() => router.push("/contact-us")}
+                className="bg-white cursor-pointer hover:bg-gray-100 text-primary px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl font-bold text-base sm:text-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1 hover:scale-[1.02] active:scale-[0.98] w-full sm:w-auto min-h-[48px] touch-manipulation flex items-center justify-center gap-2"
               >
                 <Smartphone className="w-5 h-5" />
-                Download App
-              </button> */}
+                Download Intelidiet
+              </button>
             </motion.div>
 
             <div className="mt-6 flex flex-col items-center lg:items-start gap-1">
-              <span className="ml-1 text-gray-400 italic">
-                (Plans starting at{" "}
+              <span className="ml-1 text-white italic">
+                (Plans starting at {" "}
                 <span className="text-secondary font-bold">₹1000</span>.)
               </span>
             </div>
@@ -148,6 +169,51 @@ const Hero = () => {
                         className="object-contain object-bottom"
                         priority
                       />
+                    </div>
+                  </div>
+
+                  {/* Slide 4: Poster 01 */}
+                  <div className="embla__slide flex-[0_0_100%] min-w-0 flex justify-center items-center">
+                    <div className="relative w-full max-w-[400px] h-[350px] sm:h-[450px] md:h-[500px] lg:h-[550px] flex items-center justify-center">
+                      <div className="p-2 border-4 border-white rounded-lg shadow-lg">
+                        <Image
+                          src="/images/poster01.jpeg"
+                          alt="Poster 01"
+                          width={400}
+                          height={550}
+                          className="object-contain rounded"
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Slide 5: Poster 02 */}
+                  <div className="embla__slide flex-[0_0_100%] min-w-0 flex justify-center items-center">
+                    <div className="relative w-full max-w-[400px] h-[350px] sm:h-[450px] md:h-[500px] lg:h-[550px] flex items-center justify-center">
+                      <div className="p-2 border-4 border-white rounded-lg shadow-lg">
+                        <Image
+                          src="/images/poster02.jpeg"
+                          alt="Poster 02"
+                          width={400}
+                          height={550}
+                          className="object-contain rounded"
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Slide 6: Poster 03 */}
+                  <div className="embla__slide flex-[0_0_100%] min-w-0 flex justify-center items-center">
+                    <div className="relative w-full max-w-[400px] h-[350px] sm:h-[450px] md:h-[500px] lg:h-[550px] flex items-center justify-center">
+                      <div className="p-2 border-4 border-white rounded-lg shadow-lg">
+                        <Image
+                          src="/images/poster03.jpeg"
+                          alt="Poster 03"
+                          width={400}
+                          height={550}
+                          className="object-contain rounded"
+                        />
+                      </div>
                     </div>
                   </div>
                 </div>

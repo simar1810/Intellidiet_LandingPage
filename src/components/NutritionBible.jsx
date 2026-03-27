@@ -99,7 +99,7 @@ const NutritionBible = () => {
                         </div>
 
                         {/* <div className="pt-4 flex items-center gap-6">
-                            <button className="bg-secondary hover:bg-orange-600 text-white px-10 py-4 rounded-full font-bold transition-all shadow-lg">
+                            <button className="bg-secondary hover:bg-orange-700 text-white px-10 py-4 rounded-full font-bold transition-all shadow-lg">
                                 View Courses
                             </button>
                             <div className="flex flex-col">
