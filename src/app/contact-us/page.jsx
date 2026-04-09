@@ -59,9 +59,13 @@ const ContactUs = () => {
     "w-full px-4 py-3 rounded-xl border border-gray-200 bg-white text-primary focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition text-sm appearance-none";
 
   const hours = [
+    { day: "Monday", time: "11AM – 2PM & 4PM – 8PM", closed: false },
+    { day: "Tuesday", time: "Closed", closed: true },
+    { day: "Wednesday", time: "11AM – 2PM & 4PM – 8PM", closed: false },
+    { day: "Thursday", time: "11AM – 2PM & 4PM – 8PM", closed: false },
+    { day: "Friday", time: "11AM – 2PM & 4PM – 8PM", closed: false },
+    { day: "Saturday", time: "2PM – 8PM", closed: false },
     { day: "Sunday", time: "Closed", closed: true },
-    { day: "Mon – Thu", time: "9 A.M – 7 P.M", closed: false },
-    { day: "Friday", time: "9 A.M – 5 P.M", closed: false },
   ];
 
   return (

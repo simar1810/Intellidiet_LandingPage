@@ -5,13 +5,29 @@ import { X } from "lucide-react";
 
 const programs = [
   {
+    id: "transformation",
+    title: "30-Day Transformation",
+    subtitle: "Reset your metabolism and reclaim your confidence",
+    duration: "30 Days",
+    price: "₹3,500",
+    icon: "🔥",
+    color: "from-red-50 to-yellow-50",
+    description: "The Inteli Diet 30-Day Transformation. Reset your metabolism and reclaim your confidence in less than a month.",
+    phases: [
+      { title: "Week 1: The Internal Cleanse (Detox & Flush)", desc: "Kickstart your journey: Dedicated to flushing out toxins and shedding stubborn water weight. Feel lighter instantly: Watch the puffiness disappear as we reset your body's natural balance." },
+      { title: "Week 2: The Digestive Reset (Debloat & Control)", desc: "Cool the fire: Targeted nutrition to reduce internal inflammation. Silence the cravings: Regain control over your appetite. Beat the bloat: Say goodbye to discomfort." },
+      { title: "Week 3: The Peak Performance (Rejuvenate & Shred)", desc: "Triple Threat: Weight loss, fat loss, and significant inch loss. Protein-Balanced Fuel: Rejuvenate cells with high-quality protein. Get free fat loss tea, Inteli diet app access, workout sessions, 2 consultations, 8 hour chat support." },
+    ],
+    features: ["Free Fat Loss Tea", "Inteli Diet App Access", "Workout Sessions", "2 Consultations", "8 Hour Chat Support"],
+  },
+  {
     id: "weight-loss",
     title: "Weight Loss",
     subtitle: "Transform your lifestyle and reclaim your health",
     duration: "3 Months",
     price: "₹10,500",
     icon: "⚖️",
-    color: "from-orange-50 to-amber-50",
+    color: "from-yellow-50 to-amber-50",
     description: "The Inteli Diet 3-Month Personalized Weight Loss Program. This isn't just a diet; it's a guided evolution led by Dt. Kavita to help you look firm, feel light, and glow from within.",
     phases: [
       { title: "Weeks 1–2: The Kickstart", desc: "Experience your first win with a 1 to 2 kg loss as you adapt to healthier habits and sustainable lifestyle changes." },
@@ -22,8 +38,8 @@ const programs = [
     features: ["12 Professional Consultations", "8-Hour Chat Support", "Weekly Check-ins", "Customized Meal Plans", "Calorie & Progress Tracking", "Curated Workout Sessions", "3 Complimentary Detox Teas", "15 Days Maintenance Plan"],
   },
   {
-    id: "pcos",
-    title: "PCOS Management",
+    id: "female-hormones",
+    title: "Female Hormones & Weight",
     subtitle: "Empower your body and balance your hormones",
     duration: "3 Months",
     price: "₹12,500",
@@ -31,14 +47,15 @@ const programs = [
     icon: "🌸",
     color: "from-pink-50 to-rose-50",
     hasMonthly: false,
-    description: "Empower your body and balance your hormones with the Inteli Diet 3-Month Personalized PCOS Management Plan. Designed by Dt. Kavita, this four-phase clinical nutrition program targets the root causes of PCOS to help you reclaim your rhythm and confidence.",
+    image: "/images/hormone-health.png",
+    description: "Empower your body and balance your hormones with the Inteli Diet 3-Month Personalized Female Hormones & Weight Management Plan. Designed by Dt. Kavita, this four-phase clinical nutrition program targets hormonal imbalances to help you reclaim your rhythm and confidence.",
     phases: [
-      { title: "Phase 1: The Insulin Reset (First 15 Days)", desc: "Stabilize & Shield: Combat insulin resistance with a high-fiber, low-glycemic (Low Gi) protocol. Smart Fuel: A high-protein, low-carb approach designed to balance blood sugar from day one." },
-      { title: "Phase 2: The Symptom Shield (Next 30 Days)", desc: "Cool the Inflammation: A dedicated anti-inflammatory diet to reduce internal swelling and PCOS-related discomfort. Take Control: Effortlessly regulate your periods, silence intense cravings, and begin your weight loss journey." },
-      { title: "Phase 3: The Cycle Sync (Next 30 Days)", desc: "Phase-Specific Nutrition: Specialized Seed Cycling integrated with a Veg/Vegan Keto plan to mirror your body's natural rhythm. Precision Timing: Follicular Phase (Days 1–14) for egg development, Luteal Phase (Days 15–28) for PMS management." },
+      { title: "Phase 1: The Insulin Reset (First 15 Days)", desc: "Stabilize & Shield: Combat insulin resistance with a high-fiber, low-glycemic protocol. Smart Fuel: A high-protein, low-carb approach designed to balance blood sugar from day one." },
+      { title: "Phase 2: The Symptom Shield (Next 30 Days)", desc: "Cool the Inflammation: A dedicated anti-inflammatory diet to reduce internal swelling and hormonal discomfort. Take Control: Effortlessly regulate your periods, silence intense cravings, and begin your weight loss journey." },
+      { title: "Phase 3: The Cycle Sync (Next 30 Days)", desc: "Phase-Specific Nutrition: Specialized Seed Cycling integrated with a Veg/Vegan Keto plan to mirror your body's natural rhythm. Precision Timing: Follicular Phase for egg development, Luteal Phase for PMS management." },
       { title: "Phase 4: The Transformation & Maintenance (Final Phase)", desc: "The Visible Result: Achieve significant improvements in body shape, weight, and fat loss. Long-Term Success: Enjoy regular cycles and a sustainable maintenance plan." },
     ],
-    features: ["12 Dietitian Consultations", "Weekly Progress Check-ins", "8-Hour Chat Support", "Customized Meal Plans", "Calorie Counters", "Workout Sessions", "3 Free PCOS Teas & Fat Loss Tea", "15 Days Free Maintenance"],
+    features: ["12 Dietitian Consultations", "Weekly Progress Check-ins", "8-Hour Chat Support", "Customized Meal Plans", "Calorie Counters", "Workout Sessions", "3 Free Hormone Balance Teas", "15 Days Free Maintenance"],
   },
   {
     id: "diabetes",
@@ -77,22 +94,6 @@ const programs = [
       { title: "Phase 3: The Advanced Synergy (Days 61–90)", desc: "Supplements & Support: Integration of high-grade supplements. Total Improvement: Significant reduction in skin issues. The Skin-Gut Axis: Lifestyle that keeps gut healthy for flawless skin." },
     ],
     features: ["12 Dietitian Consultations", "Weekly Progress Tracking", "8-Hour Chat Support", "Custom Meal Plans", "Calorie Counters", "Workout Sessions", "3 Skin Glow Teas & Supplements", "15 Days Free Maintenance"],
-  },
-  {
-    id: "transformation",
-    title: "30-Day Transformation",
-    subtitle: "Reset your metabolism and reclaim your confidence",
-    duration: "30 Days",
-    price: "₹3,500",
-    icon: "🔥",
-    color: "from-red-50 to-orange-50",
-    description: "The Inteli Diet 30-Day Transformation. Reset your metabolism and reclaim your confidence in less than a month.",
-    phases: [
-      { title: "Week 1: The Internal Cleanse (Detox & Flush)", desc: "Kickstart your journey: Dedicated to flushing out toxins and shedding stubborn water weight. Feel lighter instantly: Watch the puffiness disappear as we reset your body's natural balance." },
-      { title: "Week 2: The Digestive Reset (Debloat & Control)", desc: "Cool the fire: Targeted nutrition to reduce internal inflammation. Silence the cravings: Regain control over your appetite. Beat the bloat: Say goodbye to discomfort." },
-      { title: "Week 3: The Peak Performance (Rejuvenate & Shred)", desc: "Triple Threat: Weight loss, fat loss, and significant inch loss. Protein-Balanced Fuel: Rejuvenate cells with high-quality protein. Get free fat loss tea, Inteli diet app access, workout sessions, 2 consultations, 8 hour chat support." },
-    ],
-    features: ["Free Fat Loss Tea", "Inteli Diet App Access", "Workout Sessions", "2 Consultations", "8 Hour Chat Support"],
   },
   {
     id: "liver",
@@ -226,7 +227,7 @@ const ProgramModal = ({ program, isOpen, onClose }) => {
                     onClose();
                     window.location.href = "/contact-us";
                   }}
-                  className="bg-secondary hover:bg-orange-700 text-white px-8 py-3 rounded-xl font-bold transition-all hover:shadow-lg"
+                  className="bg-secondary hover:bg-yellow-700 text-white px-8 py-3 rounded-xl font-bold transition-all hover:shadow-lg"
                 >
                   Enroll Now
                 </button>
@@ -273,11 +274,18 @@ const Programs = () => {
                 onClick={() => setSelectedProgram(program)}
                 className="group cursor-pointer"
               >
-                <div className={`relative bg-gradient-to-br ${program.color} rounded-2xl p-6 sm:p-8 h-full border border-transparent hover:border-secondary/20 hover:shadow-2xl transition-all duration-300`}>
+                <div className={`relative bg-gradient-to-br ${program.color} rounded-2xl p-6 sm:p-8 h-full border border-transparent hover:border-secondary/20 hover:shadow-2xl transition-all duration-300 overflow-hidden`}>
+                  {program.image && (
+                    <div className="mb-4 -mt-4 -mx-6 sm:-mx-8">
+                      <img src={program.image} alt={program.title} className="w-[calc(100%+3rem)] sm:w-[calc(100%+4rem)] h-48 object-cover" />
+                    </div>
+                  )}
                   <div className="flex items-start justify-between mb-4">
+                    {!program.image && (
                     <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-2xl shadow-sm">
                       {program.icon}
                     </div>
+                    )}
                     <span className="text-xs font-medium text-gray-500 bg-white/60 px-3 py-1 rounded-full">
                       {program.duration}
                     </span>

@@ -112,7 +112,7 @@ export default function Header() {
             className={`px-6 py-2.5 rounded-lg font-bold text-sm transition-all duration-300 shadow-xl hover:-translate-y-1 min-h-[40px] ${
               isContactPage
                 ? "bg-white text-primary border-2 border-secondary"
-                : "bg-secondary hover:bg-orange-700 text-white hover:shadow-orange-200"
+                : "bg-secondary hover:bg-yellow-700 text-white hover:shadow-yellow-200"
             }`}
           >
             Join Now
@@ -218,7 +218,7 @@ export default function Header() {
             className={`px-6 py-3 rounded-lg font-bold text-base mt-2 ${
               isContactPage
                 ? "bg-white text-primary border-2 border-secondary"
-                : "bg-secondary hover:bg-orange-700 text-white"
+                : "bg-secondary hover:bg-yellow-700 text-white"
             }`}
           >
             Join Now

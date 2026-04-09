@@ -42,7 +42,8 @@ const Hero = () => {
       className="min-h-screen relative pt-24 sm:pt-28 md:pt-32 px-4 sm:px-6 md:px-10 overflow-hidden bg-[#1a1a2e]"
       id="home"
       style={{
-        background: "linear-gradient(135deg, #66CDAA 0%, #8FBC8F 50%, #98FB98 100%)",
+        background:
+          "linear-gradient(135deg, #66CDAA 0%, #8FBC8F 50%, #98FB98 100%)",
       }}
     >
       <div className="container mx-auto px-4 md:px-6 max-w-7xl">
@@ -72,7 +73,8 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-white text-base sm:text-lg md:text-xl max-w-xl mx-auto lg:mx-0 leading-relaxed">
+              className="text-white text-base sm:text-lg md:text-xl max-w-xl mx-auto lg:mx-0 leading-relaxed"
+            >
               Transform your health with customised nutrition, intelligent
               tools, and trusted expert advice tailored to your unique
               lifestyle.
@@ -91,9 +93,6 @@ const Hero = () => {
                   </span>
                 </span>
               </div>
-
-
-
             </motion.div>
 
             <motion.div
@@ -104,7 +103,7 @@ const Hero = () => {
             >
               <button
                 onClick={() => router.push("/contact-us")}
-                className="bg-secondary cursor-pointer hover:bg-orange-700 text-white px-8 sm:px-10 py-3.5 sm:py-4 rounded-xl font-bold text-base sm:text-lg transition-all duration-300 shadow-xl hover:shadow-orange-200 hover:-translate-y-1 hover:scale-[1.02] active:scale-[0.98] w-full sm:w-auto min-h-[48px] touch-manipulation"
+                className="bg-secondary cursor-pointer hover:bg-yellow-700 text-white px-8 sm:px-10 py-3.5 sm:py-4 rounded-xl font-bold text-base sm:text-lg transition-all duration-300 shadow-xl hover:shadow-yellow-200 hover:-translate-y-1 hover:scale-[1.02] active:scale-[0.98] w-full sm:w-auto min-h-[48px] touch-manipulation"
               >
                 Join Now
               </button>
@@ -119,7 +118,7 @@ const Hero = () => {
 
             <div className="mt-6 flex flex-col items-center lg:items-start gap-1">
               <span className="ml-1 text-white italic">
-                (Plans starting at {" "}
+                (Plans starting at{" "}
                 <span className="text-secondary font-bold">₹1000</span>.)
               </span>
             </div>

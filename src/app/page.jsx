@@ -12,6 +12,7 @@ import AboutSection from "../components/AboutUs";
 import AppFeatures from "../components/AppFeatures";
 import WhatToExpect from "../components/WhatToExpect";
 import TeaAdvertisement from "../components/TeaAdvertisement";
+import HowWeWork from "../components/HowWeWork";
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
       <AboutSection />
       <WhyWorkWithUs />
       <Programs />
+      <HowWeWork />
       <WhatToExpect />
       <NutritionBible />
       <TeaAdvertisement />
