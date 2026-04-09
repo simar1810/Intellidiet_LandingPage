@@ -192,7 +192,9 @@ const HowWeWork = () => {
                   Get Free Trial Plan
                 </a>
                 <a
-                  href="/app"
+                  href="https://wa.me/919625691566?text=Hi%2C%20I%27m%20interested%20in%20downloading%20the%20app"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-primary hover:bg-gray-800 text-white px-6 py-3 rounded-xl font-semibold transition-all hover:shadow-lg"
                 >
                   Download App
