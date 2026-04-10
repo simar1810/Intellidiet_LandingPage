@@ -86,22 +86,22 @@ const Footer = () => {
             </h3>
             <div className="space-y-4">
               <a
-                href="tel:9625691566"
+                href="tel:8130404370"
                 className="flex items-center gap-3 text-primary/80 hover:text-primary text-sm transition-colors duration-200 focus:outline-none focus:text-primary"
               >
                 <span className="flex-shrink-0 w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center">
                   <Phone size={16} className="text-secondary" />
                 </span>
-                96256 91566
+                8130404370
               </a>
               <a
-                href="mailto:nutricurediet@gmail.com"
+                href="mailto:Info@aktivhealth.com"
                 className="flex items-center gap-3 text-primary/80 hover:text-primary text-sm transition-colors duration-200 break-all focus:outline-none focus:text-primary"
               >
                 <span className="flex-shrink-0 w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center">
                   <Mail size={16} className="text-secondary" />
                 </span>
-                nutricurediet@gmail.com
+                Info@aktivhealth.com
               </a>
             </div>
           </div>
