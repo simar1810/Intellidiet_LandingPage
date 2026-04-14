@@ -17,7 +17,7 @@ const NutritionBible = () => {
           >
             <div className="relative z-10 rounded-2xl sm:rounded-[2.5rem] md:rounded-[3rem] overflow-hidden shadow-2xl">
               <img
-                src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&q=80&w=800"
+                src="/images/kavita.png"
                 alt="Nutrition"
                 className="w-full h-auto object-cover"
               />
@@ -47,7 +47,7 @@ const NutritionBible = () => {
             className="lg:w-1/2 space-y-6 sm:space-y-8 relative min-w-0"
           >
             <div className="space-y-4">
-              <p className="text-yellow-600 font-bold tracking-widest uppercase text-sm">Intelligent</p>
+              <p className="text-[#54151B] font-bold tracking-widest uppercase text-sm">Intelligent</p>
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-primary leading-tight">
                 Special Female Programs
               </h2>
@@ -58,7 +58,7 @@ const NutritionBible = () => {
 
                         <div className="space-y-6">
                             <div className="flex gap-4">
-                                <div className="flex-shrink-0 w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center text-secondary">
+                                <div className="flex-shrink-0 w-12 h-12 bg-[#f5ebe5] rounded-full flex items-center justify-center text-secondary">
                                     <img src="/images/pregnancy-icon.webp" alt="Meat Icon" className="w-10 h-10" />
                                 </div>
                                 <div>
@@ -68,7 +68,7 @@ const NutritionBible = () => {
                             </div>
 
                             <div className="flex gap-4">
-                                <div className="flex-shrink-0 w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center text-secondary">
+                                <div className="flex-shrink-0 w-12 h-12 bg-[#f5ebe5] rounded-full flex items-center justify-center text-secondary">
                                     <img src="/images/hormone-health.png" alt="Milk Icon" className="w-10 h-10" />
                                 </div>
                                 <div>
@@ -78,7 +78,7 @@ const NutritionBible = () => {
                             </div>
 
                             <div className="flex gap-4">
-                                <div className="flex-shrink-0 w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center text-secondary">
+                                <div className="flex-shrink-0 w-12 h-12 bg-[#f5ebe5] rounded-full flex items-center justify-center text-secondary">
                                     <img src="/images/women-nutri.png" alt="Milk Icon" className="w-10 h-10" />
                                 </div>
                                 <div>
@@ -88,7 +88,7 @@ const NutritionBible = () => {
                             </div>
 
                             <div className="flex gap-4">
-                                <div className="flex-shrink-0 w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center text-secondary">
+                                <div className="flex-shrink-0 w-12 h-12 bg-[#f5ebe5] rounded-full flex items-center justify-center text-secondary">
                                     <img src="/images/weight-loss.png" alt="Milk Icon" className="w-10 h-10" />
                                 </div>
                                 <div>
@@ -99,7 +99,7 @@ const NutritionBible = () => {
                         </div>
 
                         {/* <div className="pt-4 flex items-center gap-6">
-                            <button className="bg-secondary hover:bg-yellow-700 text-white px-10 py-4 rounded-full font-bold transition-all shadow-lg">
+                            <button className="bg-[#54151B] hover:bg-[#7a1f2e] text-white px-10 py-4 rounded-full font-bold transition-all shadow-lg">
                                 View Courses
                             </button>
                             <div className="flex flex-col">

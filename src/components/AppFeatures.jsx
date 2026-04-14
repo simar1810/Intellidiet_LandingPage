@@ -30,7 +30,7 @@ const features = [
             "Get a detailed breakdown of your daily diet — calories, protein, carbs, fats and micronutrients. Discover healthy recipes tailored to your goals, preferences and dietary restrictions.",
         image: "/images/app-features/diet_ad.jpeg",
         icon: <Salad className="w-6 h-6" />,
-        accent: "from-yellow-400/20 to-amber-400/10",
+        accent: "from-[#54151B]/20 to-[#7a1f2e]/10",
         iconBg: "bg-secondary/20 text-secondary",
     },
     {
@@ -219,7 +219,7 @@ const AppFeatures = () => {
                                 <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-3">
                                     <button
                                         onClick={() => router.push("/app")}
-                                        className="bg-secondary cursor-pointer hover:bg-yellow-700 text-white px-8 py-3.5 rounded-xl font-bold text-sm sm:text-base transition-all duration-300 shadow-lg hover:shadow-yellow-500/30 hover:-translate-y-0.5 active:scale-[0.98] flex items-center gap-2 w-full sm:w-auto justify-center min-h-[48px] touch-manipulation"
+                                        className="bg-[#54151B] cursor-pointer hover:bg-[#7a1f2e] text-white px-8 py-3.5 rounded-xl font-bold text-sm sm:text-base transition-all duration-300 shadow-lg hover:shadow-[#d4888f]/30 hover:-translate-y-0.5 active:scale-[0.98] flex items-center gap-2 w-full sm:w-auto justify-center min-h-[48px] touch-manipulation"
                                     >
                                         <Download className="w-5 h-5" />
                                         Download Now

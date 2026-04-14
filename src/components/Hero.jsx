@@ -103,12 +103,12 @@ const Hero = () => {
             >
               <button
                 onClick={() => router.push("/contact-us")}
-                className="bg-secondary cursor-pointer hover:bg-yellow-700 text-white px-8 sm:px-10 py-3.5 sm:py-4 rounded-xl font-bold text-base sm:text-lg transition-all duration-300 shadow-xl hover:shadow-yellow-200 hover:-translate-y-1 hover:scale-[1.02] active:scale-[0.98] w-full sm:w-auto min-h-[48px] touch-manipulation"
+                className="bg-[#54151B] cursor-pointer hover:bg-[#7a1f2e] text-white px-8 sm:px-10 py-3.5 sm:py-4 rounded-xl font-bold text-base sm:text-lg transition-all duration-300 shadow-xl hover:shadow-[#d4888f] hover:-translate-y-1 hover:scale-[1.02] active:scale-[0.98] w-full sm:w-auto min-h-[48px] touch-manipulation"
               >
                 Join Now
               </button>
               <button
-                onClick={() => router.push("/contact-us")}
+                onClick={() => router.push("/app")}
                 className="bg-white cursor-pointer hover:bg-gray-100 text-primary px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl font-bold text-base sm:text-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1 hover:scale-[1.02] active:scale-[0.98] w-full sm:w-auto min-h-[48px] touch-manipulation flex items-center justify-center gap-2"
               >
                 <Smartphone className="w-5 h-5" />
@@ -118,7 +118,7 @@ const Hero = () => {
 
             <div className="mt-6 flex flex-col items-center lg:items-start gap-1">
               <span className="ml-1 text-white italic">
-                (Plans starting at{" "}
+                (Trial Plans starting at{" "}
                 <span className="text-secondary font-bold">₹1000</span>.)
               </span>
             </div>
@@ -171,7 +171,20 @@ const Hero = () => {
                     </div>
                   </div>
 
-                  {/* Slide 4: Poster 01 */}
+                  {/* Slide 4: Dt. Kavita - Flush to bottom */}
+                  <div className="embla__slide flex-[0_0_100%] min-w-0 flex justify-center items-end">
+                    <div className="relative w-full h-[350px] sm:h-[450px] md:h-[550px] lg:h-[650px]">
+                      <Image
+                        src="/images/kavita1.png"
+                        alt="Dt. Kavita laptop"
+                        fill
+                        className="object-contain object-bottom"
+                        priority
+                      />
+                    </div>
+                  </div>
+
+                  {/* Slide 4: Poster 01 
                   <div className="embla__slide flex-[0_0_100%] min-w-0 flex justify-center items-center">
                     <div className="relative w-full max-w-[400px] h-[350px] sm:h-[450px] md:h-[500px] lg:h-[550px] flex items-center justify-center">
                       <div className="p-2 border-4 border-white rounded-lg shadow-lg">
@@ -184,9 +197,9 @@ const Hero = () => {
                         />
                       </div>
                     </div>
-                  </div>
+                  </div>*/}
 
-                  {/* Slide 5: Poster 02 */}
+                  {/* Slide 5: Poster 02 
                   <div className="embla__slide flex-[0_0_100%] min-w-0 flex justify-center items-center">
                     <div className="relative w-full max-w-[400px] h-[350px] sm:h-[450px] md:h-[500px] lg:h-[550px] flex items-center justify-center">
                       <div className="p-2 border-4 border-white rounded-lg shadow-lg">
@@ -199,9 +212,9 @@ const Hero = () => {
                         />
                       </div>
                     </div>
-                  </div>
+                  </div>*/}
 
-                  {/* Slide 6: Poster 03 */}
+                  {/* Slide 6: Poster 03 
                   <div className="embla__slide flex-[0_0_100%] min-w-0 flex justify-center items-center">
                     <div className="relative w-full max-w-[400px] h-[350px] sm:h-[450px] md:h-[500px] lg:h-[550px] flex items-center justify-center">
                       <div className="p-2 border-4 border-white rounded-lg shadow-lg">
@@ -214,7 +227,7 @@ const Hero = () => {
                         />
                       </div>
                     </div>
-                  </div>
+                  </div>*/}
                 </div>
               </div>
             </div>

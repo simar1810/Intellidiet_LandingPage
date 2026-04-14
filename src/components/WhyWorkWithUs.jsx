@@ -81,7 +81,7 @@ const WhyWorkWithUs = () => {
             whileHover={{ y: -4, transition: { duration: 0.2 } }}
             className="relative bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden group p-6 md:p-8"
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-yellow-50 to-white opacity-70 group-hover:scale-105 transition-transform duration-700"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-[#faf6f4] to-white opacity-70 group-hover:scale-105 transition-transform duration-700"></div>
             <div className="relative z-10">
               <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-secondary/10 flex items-center justify-center text-2xl mb-4">
                 ⚡

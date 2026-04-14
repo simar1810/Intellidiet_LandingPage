@@ -286,8 +286,7 @@ const AboutSection = () => {
                   <p className="text-white font-bold text-lg">Dt. Kavita</p>
                   <p className="text-white/80 text-sm">
                     Founder of <b className="text-accent">Intelidiet</b> and{" "}
-                    <b className="text-accent">Nutricure diet</b> & Nutrition
-                    Expert
+                    <b className="text-accent">Nutrition Expert</b>
                   </p>
                 </div>
               </div>

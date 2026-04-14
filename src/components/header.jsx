@@ -85,35 +85,31 @@ export default function Header() {
         <div className="hidden md:flex items-center gap-10">
           <button
             onClick={scrollToTop}
-            className={`text-sm uppercase tracking-widest font-medium ${isHomePage && activeSection === "home" ? "text-white" : "text-white/40 hover:text-white/70"}`}
+            className={`text-sm uppercase tracking-widest font-bold ${isHomePage && activeSection === "home" ? "text-white" : "text-white/40 hover:text-white/70"}`}
           >
             Home
           </button>
           <button
             onClick={() => scrollToSection("about")}
-            className={`text-sm uppercase tracking-widest font-medium ${activeSection === "about" ? "text-white" : "text-white/50 hover:text-white"}`}
+            className={`text-sm uppercase tracking-widest font-bold ${activeSection === "about" ? "text-white" : "text-white/50 hover:text-white"}`}
           >
             About Us
           </button>
           <button
             onClick={() => scrollToSection("programs")}
-            className={`text-sm uppercase tracking-widest font-medium ${activeSection === "programs" ? "text-white" : "text-white/50 hover:text-white"}`}
+            className={`text-sm uppercase tracking-widest font-bold ${activeSection === "programs" ? "text-white" : "text-white/50 hover:text-white"}`}
           >
             Programs
           </button>
           <button
             onClick={() => scrollToSection("blogs")}
-            className={`text-sm uppercase tracking-widest font-medium ${activeSection === "blogs" ? "text-white" : "text-white/50 hover:text-white"}`}
+            className={`text-sm uppercase tracking-widest font-bold ${activeSection === "blogs" ? "text-white" : "text-white/50 hover:text-white"}`}
           >
             Latest Services
           </button>
           <button
             onClick={() => router.push("/contact-us")}
-            className={`px-6 py-2.5 rounded-lg font-bold text-sm transition-all duration-300 shadow-xl hover:-translate-y-1 min-h-[40px] ${
-              isContactPage
-                ? "bg-white text-primary border-2 border-secondary"
-                : "bg-secondary hover:bg-yellow-700 text-white hover:shadow-yellow-200"
-            }`}
+            className="px-6 py-2.5 rounded-lg font-bold text-sm transition-all duration-300 shadow-xl hover:-translate-y-1 min-h-[40px] bg-[#54151B] hover:bg-[#7a1f2e] text-white hover:shadow-[#d4888f]"
           >
             Join Now
           </button>
@@ -164,7 +160,7 @@ export default function Header() {
                 router.push("/");
               }
             }}
-            className={`text-lg font-medium py-3 ${isHomePage && activeSection === "home" ? "text-white" : "text-white/40"}`}
+            className={`text-lg font-bold py-3 ${isHomePage && activeSection === "home" ? "text-white" : "text-white/40"}`}
           >
             Home
           </button>
@@ -179,7 +175,7 @@ export default function Header() {
                 router.push("/#about");
               }
             }}
-            className={`text-lg font-medium py-3 ${activeSection === "about" ? "text-white" : "text-white/60"}`}
+            className={`text-lg font-bold py-3 ${activeSection === "about" ? "text-white" : "text-white/60"}`}
           >
             About Us
           </button>
@@ -194,7 +190,7 @@ export default function Header() {
                 router.push("/#programs");
               }
             }}
-            className={`text-lg font-medium py-3 ${activeSection === "programs" ? "text-white" : "text-white/60"}`}
+            className={`text-lg font-bold py-3 ${activeSection === "programs" ? "text-white" : "text-white/60"}`}
           >
             Programs
           </button>
@@ -209,17 +205,13 @@ export default function Header() {
                 router.push("/#blogs");
               }
             }}
-            className={`text-lg font-medium py-3 ${activeSection === "blogs" ? "text-white" : "text-white/60"}`}
+            className={`text-lg font-bold py-3 ${activeSection === "blogs" ? "text-white" : "text-white/60"}`}
           >
             Latest Services
           </button>
           <button
             onClick={() => router.push("/contact-us")}
-            className={`px-6 py-3 rounded-lg font-bold text-base mt-2 ${
-              isContactPage
-                ? "bg-white text-primary border-2 border-secondary"
-                : "bg-secondary hover:bg-yellow-700 text-white"
-            }`}
+            className="px-6 py-3 rounded-lg font-bold text-base mt-2 bg-[#54151B] hover:bg-[#7a1f2e] text-white"
           >
             Join Now
           </button>

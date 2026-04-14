@@ -49,7 +49,7 @@ const ContactUs = () => {
       "*Occupation:* " + formData.occupation,
       "*Primary goal:* " + finalGoal,
     ].join("\n");
-    const whatsappUrl = `https://wa.me/918130404370?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/919625691566?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, "_blank");
   };
 
@@ -115,7 +115,7 @@ const ContactUs = () => {
                 </h2>
                 <div className="space-y-5">
                   <a
-                    href="mailto:Info@aktivhealth.com"
+                    href="mailto:iinteldiet@gmail.com"
                     className="flex items-start gap-4 p-3 rounded-xl hover:bg-primary/5 transition-colors group"
                   >
                     <span className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-secondary/20 transition-colors">
@@ -123,11 +123,11 @@ const ContactUs = () => {
                     </span>
                     <div className="min-w-0">
                       <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider">Email</p>
-                      <p className="text-primary font-medium break-all mt-0.5">Info@aktivhealth.com</p>
+                      <p className="text-primary font-medium break-all mt-0.5">iinteldiet@gmail.com</p>
                     </div>
                   </a>
                   <a
-                    href="tel:8130404370"
+                    href="tel:9625691566"
                     className="flex items-start gap-4 p-3 rounded-xl hover:bg-primary/5 transition-colors group"
                   >
                     <span className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-secondary/20 transition-colors">
@@ -135,7 +135,7 @@ const ContactUs = () => {
                     </span>
                     <div>
                       <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider">Phone</p>
-                      <p className="text-primary font-medium mt-0.5">8130404370</p>
+                      <p className="text-primary font-medium mt-0.5">9625691566</p>
                     </div>
                   </a>
                 </div>

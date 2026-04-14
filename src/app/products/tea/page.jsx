@@ -288,7 +288,7 @@ export default function TeaProductsPage() {
 
                                         <button
                                             onClick={() => router.push("/contact-us")}
-                                            className="inline-flex items-center gap-2 bg-secondary hover:bg-yellow-700 text-white font-bold px-6 py-3 rounded-xl text-sm sm:text-base shadow-lg hover:shadow-yellow-400/30 transition-all duration-300 hover:-translate-y-0.5 active:scale-95 whitespace-nowrap"
+                                            className="inline-flex items-center gap-2 bg-[#54151B] hover:bg-[#7a1f2e] text-white font-bold px-6 py-3 rounded-xl text-sm sm:text-base shadow-lg hover:shadow-[#d4888f]/30 transition-all duration-300 hover:-translate-y-0.5 active:scale-95 whitespace-nowrap"
                                         >
                                             Order Now
                                             <ChevronRight className="w-4 h-4" />

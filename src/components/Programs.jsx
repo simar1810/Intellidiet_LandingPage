@@ -9,9 +9,9 @@ const programs = [
     title: "30-Day Transformation",
     subtitle: "Reset your metabolism and reclaim your confidence",
     duration: "30 Days",
-    price: "₹3,500",
+    price: "₹4,500",
     icon: "🔥",
-    color: "from-red-50 to-yellow-50",
+    color: "from-red-50 to-[#faf6f4]",
     description: "The Inteli Diet 30-Day Transformation. Reset your metabolism and reclaim your confidence in less than a month.",
     phases: [
       { title: "Week 1: The Internal Cleanse (Detox & Flush)", desc: "Kickstart your journey: Dedicated to flushing out toxins and shedding stubborn water weight. Feel lighter instantly: Watch the puffiness disappear as we reset your body's natural balance." },
@@ -27,7 +27,7 @@ const programs = [
     duration: "3 Months",
     price: "₹10,500",
     icon: "⚖️",
-    color: "from-yellow-50 to-amber-50",
+    color: "from-[#faf6f4] to-[#f5ebe5]",
     description: "The Inteli Diet 3-Month Personalized Weight Loss Program. This isn't just a diet; it's a guided evolution led by Dt. Kavita to help you look firm, feel light, and glow from within.",
     phases: [
       { title: "Weeks 1–2: The Kickstart", desc: "Experience your first win with a 1 to 2 kg loss as you adapt to healthier habits and sustainable lifestyle changes." },
@@ -47,7 +47,6 @@ const programs = [
     icon: "🌸",
     color: "from-pink-50 to-rose-50",
     hasMonthly: false,
-    image: "/images/hormone-health.png",
     description: "Empower your body and balance your hormones with the Inteli Diet 3-Month Personalized Female Hormones & Weight Management Plan. Designed by Dt. Kavita, this four-phase clinical nutrition program targets hormonal imbalances to help you reclaim your rhythm and confidence.",
     phases: [
       { title: "Phase 1: The Insulin Reset (First 15 Days)", desc: "Stabilize & Shield: Combat insulin resistance with a high-fiber, low-glycemic protocol. Smart Fuel: A high-protein, low-carb approach designed to balance blood sugar from day one." },
@@ -61,7 +60,7 @@ const programs = [
     id: "diabetes",
     title: "Diabetes Management",
     subtitle: "Scientifically backed approach to stabilize blood sugar",
-    duration: "1-3 Months",
+    duration: "3 Months",
     price: "₹12,500",
     monthlyPrice: "₹4,500",
     icon: "💉",
@@ -227,7 +226,7 @@ const ProgramModal = ({ program, isOpen, onClose }) => {
                     onClose();
                     window.location.href = "/contact-us";
                   }}
-                  className="bg-secondary hover:bg-yellow-700 text-white px-8 py-3 rounded-xl font-bold transition-all hover:shadow-lg"
+                  className="bg-[#54151B] hover:bg-[#7a1f2e] text-white px-8 py-3 rounded-xl font-bold transition-all hover:shadow-lg"
                 >
                   Enroll Now
                 </button>

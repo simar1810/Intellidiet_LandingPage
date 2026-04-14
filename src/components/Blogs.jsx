@@ -16,21 +16,39 @@ const Blogs = () => {
   const blogs = [
     {
       title: "Weight Loss",
-      description: "Transform your lifestyle and reclaim your health with personalized diet plans",
-      image: "https://www.allinclusive.care/wp-content/uploads/2022/05/nutritionist-in-his-office-measures-the-volume-of-his-patient-s-waist-Weight-Loss-Miami.jpg",
+      description: "Sustainable and science-backed diet plans tailored to help you shed pounds while keeping your energy levels high.",
+      image: "/images/weight_loss.png",
       price: "₹10,500",
     },
     {
       title: "Diabetes Management",
-      description: "Scientifically backed approach to stabilize blood sugar and improve energy levels",
-      image: "https://tse4.mm.bing.net/th/id/OIP.R95S9mQMPd1pxVCC-K3e8gHaE8?pid=Api&P=0&h=180",
+      description: "Personalized nutrition strategies to naturally stabilize your blood sugar and improve your metabolic health.",
+      image: "/images/diabetes_management.png",
       price: "₹12,500",
     },
     {
       title: "PCOS/PCOD Management",
-      description: "Empower your body and balance your hormones with clinical nutrition",
-      image: "http://www.krupahospital.com/images/services/Pcod-pcos.jpg",
+      description: "Holistic dietary approaches designed to restore hormonal balance, boost fertility, and manage symptoms.",
+      image: "/images/pcos.png",
       price: "₹12,000",
+    },
+    {
+      title: "Skin Nutrition",
+      description: "Unlock your natural glow from within with nutrient-dense meals that promote radiant, clear, and youthful skin.",
+      image: "/images/skin_nutrition.png",
+      price: "₹10,000",
+    },
+    {
+      title: "Liver Health",
+      description: "Detoxify and rejuvenate your body with targeted nutrition to support optimal liver function and overall vitality.",
+      image: "/images/liver_health.png",
+      price: "₹11,000",
+    },
+    {
+      title: "30 Day Transformation",
+      description: "A comprehensive, results-driven nutrition bootcamp to kickstart your metabolism and transform your habits.",
+      image: "/images/transformation.png",
+      price: "₹4500",
     },
   ];
 

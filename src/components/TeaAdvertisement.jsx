@@ -9,9 +9,9 @@ const teas = [
     {
         name: "Contour Fat Loss Tea",
         tagline: "Burn fat naturally with every sip",
-        color: "from-yellow-400 to-amber-500",
-        bgLight: "bg-yellow-50",
-        textColor: "text-yellow-700",
+        color: "from-[#54151B] to-[#7a1f2e]",
+        bgLight: "bg-[#faf6f4]",
+        textColor: "text-[#54151B]",
     },
     {
         name: "Liver Support Tea",
@@ -175,7 +175,7 @@ const TeaAdvertisement = () => {
                             <div className="flex flex-col sm:flex-row items-center gap-3">
                                 <button
                                     onClick={() => router.push("/contact-us")}
-                                    className="bg-secondary cursor-pointer hover:bg-yellow-700 text-white px-8 py-3.5 rounded-xl font-bold text-sm sm:text-base transition-all duration-300 shadow-lg hover:shadow-yellow-500/30 hover:-translate-y-0.5 active:scale-[0.98] flex items-center gap-2 min-h-[48px] touch-manipulation w-full sm:w-auto justify-center"
+                                    className="bg-[#54151B] cursor-pointer hover:bg-[#7a1f2e] text-white px-8 py-3.5 rounded-xl font-bold text-sm sm:text-base transition-all duration-300 shadow-lg hover:shadow-[#d4888f]/30 hover:-translate-y-0.5 active:scale-[0.98] flex items-center gap-2 min-h-[48px] touch-manipulation w-full sm:w-auto justify-center"
                                 >
                                     Order Now
                                     <ChevronRight className="w-4 h-4" />

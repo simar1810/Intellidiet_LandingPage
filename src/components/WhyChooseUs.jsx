@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 const WhyChooseUs = () => {
   const reasons = [
-    { title: "Personalized Nutrition Plans", description: "Tailored diet plans based on your health goals, lifestyle, and preferences to achieve sustainable results.", icon: <Shield className="w-8 h-8" />, color: "bg-yellow-50", iconColor: "text-yellow-600" },
+    { title: "Personalized Nutrition Plans", description: "Tailored diet plans based on your health goals, lifestyle, and preferences to achieve sustainable results.", icon: <Shield className="w-8 h-8" />, color: "bg-[#f5ebe5]", iconColor: "text-[#54151B]" },
     { title: "Trusted by Clients", description: "Our certified nutritionists provide reliable guidance to help you improve overall wellness and health.", icon: <Star className="w-8 h-8" />, color: "bg-green-50", iconColor: "text-green-500" },
     { title: "Quick & Effective Results", description: "Achieve your fitness and health goals faster with scientifically-backed nutrition strategies.", icon: <Zap className="w-8 h-8" />, color: "bg-blue-50", iconColor: "text-blue-500" },
     { title: "Expert Support", description: "Get continuous guidance and support from our team to stay motivated and on track.", icon: <Headphones className="w-8 h-8" />, color: "bg-cyan-50", iconColor: "text-cyan-500" },
