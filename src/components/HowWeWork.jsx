@@ -13,8 +13,8 @@ const features = [
 ];
 
 const testimonialImages = [
-  // Add tes1 to tes27 images with .jpeg extension
-  ...Array.from({ length: 27 }, (_, i) => `/images/testimonials/tes${i + 1}.jpeg`),
+  // Add tes1 to tes36 images with .jpeg extension
+  ...Array.from({ length: 36 }, (_, i) => `/images/testimonials/tes${i + 1}.jpeg`),
   // Existing testimonials
   "/images/testimonials/testimonial-1.jpg",
   "/images/testimonials/testimonial-2.jpeg",

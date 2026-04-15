@@ -15,41 +15,36 @@ const Blogs = () => {
 
   const blogs = [
     {
-      title: "Weight Loss",
+      title: "Advance Weight Loss Program - 3 Months",
       description: "Sustainable and science-backed diet plans tailored to help you shed pounds while keeping your energy levels high.",
       image: "/images/weight_loss.png",
       price: "₹10,500",
     },
     {
-      title: "Diabetes Management",
+      title: "Advance Diabetes Reversal Program - 3 Months",
       description: "Personalized nutrition strategies to naturally stabilize your blood sugar and improve your metabolic health.",
       image: "/images/diabetes_management.png",
       price: "₹12,500",
     },
     {
-      title: "PCOS/PCOD Management",
+      title: "Advance PCOS/PCOD Reversal Program - 3 Months",
       description: "Holistic dietary approaches designed to restore hormonal balance, boost fertility, and manage symptoms.",
       image: "/images/pcos.png",
-      price: "₹12,000",
+      price: "₹12,500",
     },
     {
-      title: "Skin Nutrition",
+      title: "Advanced Skin Bio-Nutri Program - 3 Months",
       description: "Unlock your natural glow from within with nutrient-dense meals that promote radiant, clear, and youthful skin.",
       image: "/images/skin_nutrition.png",
-      price: "₹10,000",
+      price: "₹15,000",
     },
     {
-      title: "Liver Health",
+      title: "The 360° Liver Reset Program - 3 Months",
       description: "Detoxify and rejuvenate your body with targeted nutrition to support optimal liver function and overall vitality.",
       image: "/images/liver_health.png",
-      price: "₹11,000",
+      price: "₹12,500",
     },
-    {
-      title: "30 Day Transformation",
-      description: "A comprehensive, results-driven nutrition bootcamp to kickstart your metabolism and transform your habits.",
-      image: "/images/transformation.png",
-      price: "₹4500",
-    },
+    
   ];
 
   const openModal = (blog) => {

@@ -39,7 +39,7 @@ const programs = [
   },
   {
     id: "female-hormones",
-    title: "Female Hormones & Weight",
+    title: "PCOS - Female Hormones & Weight",
     subtitle: "Empower your body and balance your hormones",
     duration: "3 Months",
     price: "₹12,500",
@@ -60,7 +60,7 @@ const programs = [
     id: "diabetes",
     title: "Diabetes Management",
     subtitle: "Scientifically backed approach to stabilize blood sugar",
-    duration: "3 Months",
+    duration: "1 - 3 Months",
     price: "₹12,500",
     monthlyPrice: "₹4,500",
     icon: "💉",
@@ -98,12 +98,12 @@ const programs = [
     id: "liver",
     title: "Liver Health",
     subtitle: "Restore your vitality and support your liver",
-    duration: "1-3 Months",
+    duration: "3 Months",
     price: "₹12,500",
-    monthlyPrice: "₹4,500",
+    monthlyPrice: "₹12,500",
     icon: "🫀",
     color: "from-green-50 to-emerald-50",
-    hasMonthly: true,
+    hasMonthly: false,
     description: "Restore your vitality and support your body's most vital filter with the Inteli Diet 3-Month Liver Health & Fibrosis Management Plan. Curated by Dt. Kavita, this structured nutritional journey focuses on cellular repair, inflammation reduction, and long-term liver resilience.",
     phases: [
       { title: "Phase 1: The Satvik Detox (Days 1–25)", desc: "The Ultimate Cleanse: Begin with a Clean Satvik Diet. Deep Detoxification: Light, easily digestible meals that flush out toxins. Systemic Reset: Calm the body and prepare for active repair." },
@@ -120,7 +120,7 @@ const ProgramModal = ({ program, isOpen, onClose }) => {
   if (!isOpen || !program) return null;
 
   const currentPrice = billingCycle === "monthly" && program.monthlyPrice ? program.monthlyPrice : program.price;
-  const currentDuration = billingCycle === "monthly" && program.monthlyPrice ? "1 Month" : program.duration;
+  const currentDuration = billingCycle === "monthly" && program.monthlyPrice ? "3 Month" : program.duration;
 
   return (
     <AnimatePresence>
